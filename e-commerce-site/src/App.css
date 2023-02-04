@@ -1,7 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.nav-container{
+  background-color : black;
+  color : white;
+}
 .nav-row-1 {
   display : flex;
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
   padding : 0 5% 0 5%;
+}
+
+.nav-row-1 h1 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing : 4px;
+}
+
+.row-1-contactInfo, .row-1-utilities {
+  display : flex;
+  flex-direction : row;
+  justify-content : space-between;
+  align-items : center;
+  min-width : 15%;
+}
+
+.row-1-contactInfo a, .row-1-utilities a{
+  text-decoration : none;
+  font-family: 'Didact Gothic', sans-serif;
+  color : white;
+  font-size : 0.8rem;
+}
+
+.nav-row-2 {
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+
+.row-2-contents {
+  display : flex;
+  flex-direction : row;
+  justify-content : space-around;
+  align-items : center;
+  width : 20%;
+  padding-bottom : 1%;
+}
+
+.row-2-contents a{
+  text-decoration : none;
+  color : white;
+  font-family : 'Didact Gothic', sans-serif;
+  font-size: 0.8rem;
 }
