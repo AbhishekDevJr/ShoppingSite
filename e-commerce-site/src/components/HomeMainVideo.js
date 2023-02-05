@@ -9,7 +9,7 @@ class HomeMainVideo extends Component {
     render(){
         return(
             <div className = "main-video">
-                <video autoplay = "autoplay" muted loop className = "video">
+                <video autoPlay = "autoplay" muted loop className = "video">
                     <source src = "z.1742585b.mp4" type = "video/mp4" />
                 </video>
             </div>

@@ -11,8 +11,8 @@ class NavBar extends Component {
             <div className = "nav-container">
                 <div className = "nav-row-1">
                     <div className = "row-1-contactInfo">
-                        <img src = "icons8-github-48.png" alt = "GitHub Icon" />
-                        <a href = "/">Abhishek Choudhari</a> 
+                        <a target = "_blank" href = "https://github.com/AbhishekDevJr"><img src = "icons8-github-48.png" alt = "GitHub Icon" /></a>
+                        <a target = "_blank" href = "https://www.linkedin.com/in/abhishek-choudhari-408526173/">Abhishek Choudhari</a> 
                     </div>
 
                     <div className = "row-1-siteLogo">
