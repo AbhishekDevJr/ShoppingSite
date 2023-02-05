@@ -11,7 +11,7 @@ class NavBar extends Component {
             <div className = "nav-container">
                 <div className = "nav-row-1">
                     <div className = "row-1-contactInfo">
-                        <img src = "" alt = "GitHub Icon" />
+                        <img src = "icons8-github-48.png" alt = "GitHub Icon" />
                         <a href = "/">Abhishek Choudhari</a> 
                     </div>
 
@@ -20,8 +20,8 @@ class NavBar extends Component {
                     </div>
 
                     <div className = "row-1-utilities">
-                        <a href = "/"><img src = "" alt = "Cart Icon" /></a>
-                        <a href = "/"><img src = "" alt = "Search Icon" /></a>
+                        <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                        <a href = "/"><img src = "icons8-search-30.png" alt = "Search Icon" /></a>
                     </div>
                 </div>
 

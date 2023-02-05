@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin : 0;
+  padding : 0;
+}
+
 .nav-container{
   background-color : black;
   color : white;
@@ -10,7 +19,7 @@
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
-  padding : 0 5% 0 5%;
+  padding : 0 4% 0 4%;
 }
 
 .nav-row-1 h1 {
@@ -23,7 +32,11 @@
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
-  min-width : 15%;
+  min-width : 11%
+}
+
+.row-1-utilities a {
+  width : 80%;
 }
 
 .row-1-contactInfo a, .row-1-utilities a{
@@ -47,6 +60,7 @@
   align-items : center;
   width : 20%;
   padding-bottom : 1%;
+  margin-top : -4px;
 }
 
 .row-2-contents a{
@@ -54,4 +68,16 @@
   color : white;
   font-family : 'Didact Gothic', sans-serif;
   font-size: 0.8rem;
+}
+
+.nav-container img {
+  height : auto;
+  width : 24px;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  overflow: clip;
 }
