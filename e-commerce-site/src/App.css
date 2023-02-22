@@ -98,6 +98,13 @@ img[alt = "GitHub Icon"]{
   width : 24px;
 }
 
+.main-video {
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+
 video {
   min-width: 100%;
   min-height: 100%;
@@ -145,30 +152,14 @@ video {
 }
 
 @media(max-width : 768px){
-  .row-1-contactInfo {
-    display : none;
+
+  video{
+    outline : 10px solid red;
   }
 
-  .row-1-utilities {
-    display : none;
-  }
-
-  .row-1-siteLogo {
-    display : block;
-    margin : 0 auto;
-  }
-
-  .row-2-contents {
-    border : 1px solid black;
-  }
-
-  .nav-container {
-    background: linear-gradient(rgba(0,0,0,.534),transparent);
-  }
-
-  video {
+  /* video {
     position: fixed;
     top : 1px;
     left : -700px;
-  }
+  } */
 }
