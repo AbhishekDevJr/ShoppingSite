@@ -42,11 +42,23 @@ body{
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
-  min-width : 11%
 }
 
-.row-1-utilities a {
-  width : 80%;
+.row-1-contactInfo {
+  width : 150px;
+}
+
+.row-1-siteLogo {
+  margin-left : -30px;
+}
+
+img[alt = "GitHub Icon"]{
+  width : auto !important;
+  height : 18px !important;
+}
+
+.row-1-utilities {
+  width : 100px;
 }
 
 .row-1-contactInfo a, .row-1-utilities a{
@@ -68,8 +80,9 @@ body{
   flex-direction : row;
   justify-content : space-around;
   align-items : center;
-  width : 20%;
+  width : 300px;
   padding-bottom : 1%;
+  padding-left : 30px;
   margin-top : -16px;
 }
 
@@ -106,7 +119,7 @@ video {
 
 .buttons {
   display : flex;
-  width : 32%;
+  width : 500px;
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
@@ -114,7 +127,7 @@ video {
 
 .buttons button {
   cursor : pointer;
-  width : 15vw;
+  width : 230px;
   background-color : black;
   color : white;
   font-family : 'Didact Gothic', sans-serif;
@@ -146,7 +159,7 @@ video {
   }
 
   .row-2-contents {
-    min-width : 40%;
+    border : 1px solid black;
   }
 
   .nav-container {
