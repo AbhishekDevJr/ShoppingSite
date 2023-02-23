@@ -6,6 +6,21 @@ class NavBar extends Component {
         super(props);
     }
 
+    handleOverlayOpen(event){
+        const overlayEle = document.querySelector('.mobile-navigation');
+        overlayEle.style.width = '100%';
+        const buttonEles = document.querySelectorAll('.buttons-container button');
+        buttonEles.forEach((item, index, array) => {
+            item.style.position = "relative";
+            item.style.style.zIndex = -1000;
+        });
+    }
+
+    handleOverlayClose(event){
+        const overlayEle = document.querySelector('.mobile-navigation');
+        overlayEle.style.width = '0';
+    }
+
     render(){
         return(
             <div className = "nav-container">
@@ -22,6 +37,20 @@ class NavBar extends Component {
                     <div className = "row-1-utilities">
                         <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
                         <a href = "/"><img src = "icons8-search-30.png" alt = "Search Icon" /></a>
+                    </div>
+
+                    <div className = "mobile-navigation">
+                        <div className = "overlay-close">
+                        <a href = "javascript:void(0)" className = "closebtn" onClick = {this.handleOverlayClose}>&times;</a>
+                        </div>
+                        {/* Mobile Navigation Overlay */}
+                        <div className = "overlay-contents">
+                            <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                            <a href = "/"><img src = "icons8-search-30.png" alt = "Search Icon" /></a>
+                        </div>
+                    </div>
+                    <div className = "overvlay-open">
+                        <button onClick = {this.handleOverlayOpen}>+</button>
                     </div>
                 </div>
 
