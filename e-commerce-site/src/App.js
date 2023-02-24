@@ -1,16 +1,10 @@
 import React from 'react';
-import {Component} from 'react';
 import NavBar from './components/NavBar';
 import HomeMainVideo from './components/HomeMainVideo';
 import Buttons from './components/Buttons';
 import './App.css';
 
-class App extends Component{
-  constructor(props){
-    super(props);
-  }
-
-  render(){
+function App(){
     return(
       <div className = "App">
         <NavBar />
@@ -18,7 +12,6 @@ class App extends Component{
         <Buttons />
       </div>
     );
-  }
 }
 
 export default App;

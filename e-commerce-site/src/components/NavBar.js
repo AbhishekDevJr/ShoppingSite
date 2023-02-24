@@ -1,27 +1,21 @@
 import React from 'react';
-import {Component} from 'react';
 
-class NavBar extends Component {
-    constructor(props){
-        super(props);
-    }
+function NavBar(){
 
-    handleOverlayOpen(event){
+    function handleOverlayOpen(event){
         const overlayEle = document.querySelector('.mobile-navigation');
         overlayEle.style.width = '100%';
-        const buttonEles = document.querySelectorAll('.buttons-container button');
-        buttonEles.forEach((item, index, array) => {
-            item.style.position = "relative";
-            item.style.style.zIndex = -1000;
-        });
+        const buttonEles = document.querySelector('.buttons');
+        buttonEles.style.display = "none";
+        
     }
 
-    handleOverlayClose(event){
+    function handleOverlayClose(event){
         const overlayEle = document.querySelector('.mobile-navigation');
         overlayEle.style.width = '0';
+        const buttonEles = document.querySelector('.buttons');
+        buttonEles.style.display = "flex";
     }
-
-    render(){
         return(
             <div className = "nav-container">
                 <div className = "nav-row-1">
@@ -41,7 +35,7 @@ class NavBar extends Component {
 
                     <div className = "mobile-navigation">
                         <div className = "overlay-close">
-                        <a href = "javascript:void(0)" className = "closebtn" onClick = {this.handleOverlayClose}>&times;</a>
+                       <button id = "overlay-closeBtn" onClick = {handleOverlayClose}>&times;</button>
                         </div>
                         {/* Mobile Navigation Overlay */}
                         <div className = "overlay-contents">
@@ -50,7 +44,7 @@ class NavBar extends Component {
                         </div>
                     </div>
                     <div className = "overvlay-open">
-                        <button onClick = {this.handleOverlayOpen}>+</button>
+                        <button onClick = {handleOverlayOpen}>+</button>
                     </div>
                 </div>
 
@@ -64,7 +58,6 @@ class NavBar extends Component {
                 </div>
             </div>
         );
-    }
 }
 
 export default NavBar;

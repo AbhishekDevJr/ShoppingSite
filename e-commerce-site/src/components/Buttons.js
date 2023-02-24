@@ -7,8 +7,8 @@ function Buttons(props){
     return(
         <div className = "buttons-container">
             <div className = "buttons">
-                <a href = "/"><button>SS23 Collection</button></a>
-                <a href = "/"><button>FW23 Collection</button></a>
+                <a href = "/"><button disabled = {false} className = "collection-btn">SS23 Collection</button></a>
+                <a href = "/"><button disabled = {false} className = "collection-btn">FW23 Collection</button></a>
             </div>
         </div>
     );

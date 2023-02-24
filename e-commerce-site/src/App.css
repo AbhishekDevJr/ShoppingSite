@@ -130,6 +130,7 @@ video {
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
+  z-index: 0;
 }
 
 .buttons button {
@@ -155,8 +156,8 @@ video {
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  left: 0;
+  z-index: 100; /* Sit on top */
+  right : 0;
   top: 0;
   background-color: rgb(0,0,0); /* Black fallback color */
   background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
@@ -188,6 +189,15 @@ video {
 
 .overvlay-open{
   display : none;
+}
+
+#overlay-closeBtn{
+  margin-top : 5px;
+  outline : none;
+  background-color : transparent;
+  border : none;
+  font-size : 38px;
+  color : white;
 }
 
 @media(max-width : 768px){

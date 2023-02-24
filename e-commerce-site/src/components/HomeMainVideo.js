@@ -1,12 +1,6 @@
 import React from 'react';
-import {Component} from 'react';
 
-class HomeMainVideo extends Component {
-    constructor(props){
-        super(props);
-    }
-
-    render(){
+function HomeMainVideo(){
         return(
             <div className = "main-video">
                 <video autoPlay = "autoplay" muted loop className = "video">
@@ -14,7 +8,6 @@ class HomeMainVideo extends Component {
                 </video>
             </div>
         );
-    }
 }
 
 export default HomeMainVideo;
