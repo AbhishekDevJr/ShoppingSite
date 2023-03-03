@@ -11,10 +11,10 @@ body{
 }
 
 .nav-container{
+  /* position : fixed; */
   background-color : transparent;
   background: linear-gradient(rgba(0,0,0,.534),transparent);
   color : white;
-  position : fixed;
   width : 100%;
   transition : 0.4s;
 }
@@ -117,7 +117,7 @@ video {
 
 .buttons-container {
   position : relative;
-  top : 46vh;
+  top : 35vh;
   display : flex;
   flex-direction : row;
   justify-content : center;
