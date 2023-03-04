@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar(){
 
@@ -50,10 +51,10 @@ function NavBar(){
 
                 <div className = "nav-row-2">
                     <div className = "row-2-contents">
-                        <a className = "underDot" href = "/">Home</a>
-                        <a href = "/mens">Men</a>
-                        <a href = "/womens">Women</a>
-                        <a href = "/about">About</a>
+                    <Link to = "/">Home</Link>
+                        <Link to = "/mens">Men</Link>
+                        <Link to = "/womens">Mens</Link>
+                        <Link to = "/about">Mens</Link>
                     </div>
                 </div>
             </div>
