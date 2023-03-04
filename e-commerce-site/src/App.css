@@ -8,10 +8,11 @@
 body{
   margin : 0;
   padding : 0;
+  font-family : 'Didact Gothic', sans-serif;
 }
 
 .nav-container{
-  /* position : fixed; */
+  position : fixed;
   background-color : transparent;
   background: linear-gradient(rgba(0,0,0,.534),transparent);
   color : white;
@@ -68,14 +69,8 @@ img[alt = "GitHub Icon"]{
   font-size : 0.8rem;
 }
 
-.nav-row-2 {
-  display : flex;
-  flex-direction : row;
-  justify-content : center;
-  align-items : center;
-}
-
 .row-2-contents {
+  margin : 0 auto;
   display : flex;
   flex-direction : row;
   justify-content : space-around;
@@ -117,7 +112,7 @@ video {
 
 .buttons-container {
   position : relative;
-  top : 35vh;
+  top : 45vh;
   display : flex;
   flex-direction : row;
   justify-content : center;
@@ -198,6 +193,43 @@ video {
   border : none;
   font-size : 38px;
   color : white;
+}
+
+.mens-section{
+  z-index : -1000;
+  position : relative;
+  outline : 1px solid red;
+  font-family : 'Didact Gothic', sans-serif;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+  height : 85vh;
+}
+
+.mens-title h1{
+  font-size : 45px;
+  letter-spacing: 10px;;
+}
+
+.filters {
+  position : absolute;
+  outline : 1px solid red;
+  bottom : 20px;
+  width : 850px;
+  padding : 0 80px 0 80px;
+  display : flex;
+  flex-direction : row;
+  justify-content : space-between;
+  align-items : center;
+}
+
+.filters > div{
+  display : flex;
+  flex-direction : row;
+  align-items : center;
+  justify-content : space-between;
+  width : 100px;
 }
 
 @media(max-width : 768px){

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-import MensSection from './MensSection';
+import MensSection from './components/MensSection';
 import NavBar from './components/NavBar';
 import HomeMainVideo from './components/HomeMainVideo';
 import Buttons from './components/Buttons';
@@ -13,11 +13,12 @@ function RouteSwitch(){
     return(
         <div className = "route-switch">
             <BrowserRouter>
+                <NavBar />
                 <Routes>
-                    <Route path = "/" element = {<App />} />
-                    <Route path = "/mens" element = {<><NavBar /><MensSection /></>} />
-                    <Route path = "/womens" element = {<><NavBar /><WomenSection /></>} />
-                    <Route path = "/about" element = {<><NavBar /><About /></>} />
+                    <Route path = "/" element = {<><HomeMainVideo /><Buttons /></>} />
+                    <Route path = "/mens" element = {<><MensSection /></>} />
+                    <Route path = "/womens" element = {<><WomenSection /></>} />
+                    <Route path = "/about" element = {<><About /></>} />
                 </Routes>
             </BrowserRouter>
         </div>

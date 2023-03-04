@@ -50,7 +50,7 @@ function NavBar(){
 
                 <div className = "nav-row-2">
                     <div className = "row-2-contents">
-                        <a href = "/">Home</a>
+                        <a className = "underDot" href = "/">Home</a>
                         <a href = "/mens">Men</a>
                         <a href = "/womens">Women</a>
                         <a href = "/about">About</a>
