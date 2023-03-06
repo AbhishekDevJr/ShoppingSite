@@ -1,7 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useState, useEffect} from 'react';
 
 function NavBar(){
+
+    // const [bgColor, setBgColor] = useState(false);
+
+    window.addEventListener('scroll', () => {
+        let navEle = document.querySelector('.nav-container');
+        if(window.scrollY >= 100){
+            navEle.classList.add('nav-containerBg');
+        }
+        else{
+            navEle.classList.remove('nav-containerBg');
+        }
+    });
 
     function handleOverlayOpen(event){
         const overlayEle = document.querySelector('.mobile-navigation');

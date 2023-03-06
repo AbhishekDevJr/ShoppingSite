@@ -21,6 +21,10 @@ body{
   transition : 0.4s;
 }
 
+.nav-containerBg{
+  background-color : black !important;
+}
+
 .nav-container:hover {
   background-color : black;
   transition : 0.4s;
@@ -246,14 +250,32 @@ video {
 
 .product-catalogue-container{
   display : grid;
-  grid-template-columns : repeat(auto-fill, minmax(350px, 1fr));
-  row-gap: 10px;
-  column-gap: 10px;
+  grid-template-columns : repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 5px;
+  column-gap: 5px;
+  background-color : black;
+  color : white;
+  padding : 80px 100px 100px 100px;
 }
 
 .product-catalogue-container div{
-  height : 400px;
-  background-color : grey;
+  height : 450px;
+  outline : 1px solid blue;
+  display : flex;
+  flex-direction : column;
+  justify-content : flex-start;
+  align-items : center;
+}
+
+.product-catalogue-container img {
+  width : 100%;
+  height : 90% !important;
+  object-fit: cover;
+}
+
+#testImg{
+  outline : 2px solid cyan;
+  height : 70vh !important;
 }
 
 @media(max-width : 768px){

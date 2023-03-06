@@ -35,77 +35,77 @@ function MensSection(){
         </div>
         <div className = "product-catalogue-container">
                 <div className = "product1">
-                    <img src = "" alt = "Red Faces Shirt" />
+                    <img src = "product-img1.jpeg" alt = "Red Faces Shirt" />
                     <p>$2552.99</p>
                 </div>
 
                 <div className = "product2">
-                    <img src = "" alt = "Butterfly Suit" />
+                    <img src = "product-img2.jpeg" alt = "Butterfly Suit" />
                     <p>$979.99</p>
                 </div>
 
                 <div className = "product3">
-                    <img src = "" alt = "Balenciaga Boots" />
+                    <img id = "testImg" src = "product-img3.jpeg" alt = "Balenciaga Boots" />
                     <p>$797.99</p>
                 </div>
 
                 <div className = "product4">
-                    <img src = "" alt = "Burberry Jacket" />
+                    <img src = "product-img4.jpeg" alt = "Burberry Jacket" />
                     <p>$779.99</p>
                 </div>
 
                 <div className = "product5">
-                    <img src = "" alt = "Gold Leaf Jacket" />
+                    <img src = "product-img5.jpeg" alt = "Gold Leaf Jacket" />
                     <p>$3779.99</p>
                 </div>
 
                 <div className = "product6">
-                    <img src = "" alt = "Snake Coat" />
+                    <img src = "product-img6.jpeg" alt = "Snake Coat" />
                     <p>$3779.99</p>
                 </div>
 
                 <div className = "product7">
-                    <img src = "" alt = "Bee Pin" />
+                    <img src = "product-img7.jpeg" alt = "Bee Pin" />
                     <p>$279.99</p>
                 </div>
 
                 <div className = "product8">
-                    <img src = "" alt = "React Shoes" />
+                    <img src = "product-img8.jpeg" alt = "React Shoes" />
                     <p>$349.99</p>
                 </div>
 
                 <div className = "product9">
-                    <img src = "" alt = "Potrait Jacket" />
+                    <img src = "product-img9.jpeg" alt = "Potrait Jacket" />
                     <p>$6349.99</p>
                 </div>
 
                 <div className = "product10">
-                    <img src = "" alt = "Red Girl Shirt" />
+                    <img src = "product-img10.jpeg" alt = "Red Girl Shirt" />
                     <p>$1349.99</p>
                 </div>
 
                 <div className = "product11">
-                    <img src = "" alt = "RS Pink Jacket" />
+                    <img src = "product-img11.jpeg" alt = "RS Pink Jacket" />
                     <p>$1149.99</p>
                 </div>
 
                 <div className = "product12">
-                    <img src = "" alt = "Playing Card Pants" />
+                    <img src = "product-img12.jpeg" alt = "Playing Card Pants" />
                     <p>$949.99</p>
                 </div>
 
                 <div className = "product13">
-                    <img src = "" alt = "Castle Backpack" />
+                    <img src = "product-img13.jpeg" alt = "Castle Backpack" />
                     <p>$699.99</p>
                 </div>
 
                 <div className = "product14">
-                    <img src = "" alt = "Black Potrait Jacket" />
+                    <img src = "product-img14.jpeg" alt = "Black Potrait Jacket" />
                     <p>$1299.99</p>
                 </div>
 
                 <div className = "product15">
-                    <img src = "" alt = "Face Long Sleeve" />
+                    <img src = "product-img15.jpeg" alt = "Face Long Sleeve" />
                     <p>$699.99</p>
                 </div>
             </div>
