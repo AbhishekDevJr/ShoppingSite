@@ -9,6 +9,7 @@ body{
   margin : 0;
   padding : 0;
   font-family : 'Didact Gothic', sans-serif;
+  /* background-color : black; */
 }
 
 .nav-container{
@@ -199,6 +200,8 @@ video {
   background-image : linear-gradient(to top,#000,transparent),url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\mensCover.jpg);
   background-position-x: center;
   background-position-y : center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index : -1000;
   position : relative;
   font-family: 'Didact Gothic', sans-serif;
@@ -213,6 +216,7 @@ video {
 .mens-section button{
   background-color : transparent;
   color : white;
+  border : none;
 }
 
 .mens-title h1{
@@ -238,6 +242,18 @@ video {
   align-items : center;
   justify-content : space-between;
   width : 100px;
+}
+
+.product-catalogue-container{
+  display : grid;
+  grid-template-columns : repeat(auto-fill, minmax(350px, 1fr));
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.product-catalogue-container div{
+  height : 400px;
+  background-color : grey;
 }
 
 @media(max-width : 768px){
