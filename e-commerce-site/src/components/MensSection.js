@@ -3,6 +3,16 @@ import {useState} from 'react';
 import {useEffect} from 'react';
 
 function MensSection(){
+
+    function handlePointerOver(event){
+        event.target.style.opacity = '0.2';
+        console.log('Event Object-->',event);
+    }
+
+    function handlePointerLeave(event){
+        event.target.style.opacity = 'initial';
+    }
+
     return(
         <div className = "mens">
         <div className = "mens-section">
@@ -12,11 +22,9 @@ function MensSection(){
 
             <div className = "filters">
                 <div className = "filter-1">
-                    <p>Sort</p>
 
                     <select name = "sort1" id ="sortF1">
-                        <option hidden selected value = ""></option>
-                        <option disabled value = "sort">Sort</option>
+                        <option value = "sort">Sort</option>
                         <option value = "default">Default</option>
                         <option value = "lowToHigh">Price: Low to High</option>
                         <option value = "highToLow">Price: High to Low</option>
@@ -24,9 +32,8 @@ function MensSection(){
                 </div>
 
                 <div className = "filter-2">
-                    <p>All Colors</p>
+                    
                     <select name = "sort2" id ="sortF2">
-                        <option hidden selected value = ""></option>
                         <option value = "all">All Colors</option>
                         <option value = "red">Red</option>
                         <option value = "black">Black</option>
@@ -38,9 +45,8 @@ function MensSection(){
                 </div>
 
                 <div className = "filter-3">
-                    <p>All Brands</p>
+                    
                     <select name = "sort3" id ="sortF3">
-                        <option hidden selected value = ""></option>
                         <option value = "all">All Brands</option>
                         <option value = "jean">Jean Paul Gaultier</option>
                         <option value = "alex">Alexander McQueen</option>
@@ -57,9 +63,8 @@ function MensSection(){
                 </div>
 
                 <div className = "filter-4">
-                    <p>All Types</p>
+                    
                     <select name = "sort2" id ="sortF2">
-                        <option hidden selected value = ""></option>
                         <option value = "all">All Types</option>
                         <option value = "top">Top</option>
                         <option value = "shoes">Shoes</option>
@@ -72,8 +77,13 @@ function MensSection(){
 
         </div>
         <div className = "product-catalogue-container">
-                <div className = "product1">
+                <div className = "product1" onMouseEnter={handlePointerOver} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img1.jpeg" alt = "Red Faces Shirt" />
+                    <div id = "absP">
+                        <h3>Red Faces Shirt</h3>
+                        <p>Jean Paul Gaultier</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
                     <p>$2552.99</p>
                 </div>
 

@@ -252,10 +252,10 @@ select{
   background-color : black;
   border : none;
   color : white;
-  width : 25px;
+  width : 200px;
   text-align : center;
   font-size : 15px;
-  outline : none;
+  cursor : pointer;
 }
 .product-catalogue-container{
   display : grid;
@@ -279,7 +279,24 @@ select{
   width : 100%;
   height : 90% !important;
   object-fit: fill;
+  opacity : 0.8;
 }
+
+.product1{
+  cursor : pointer;
+  position : relative;
+}
+
+#absP{
+  position : absolute;
+  background-color : black;
+  height : 200px;
+  bottom : 0;
+}
+
+/* #sortF1{
+  width : 100px;
+} */
 
 /* #testImg{
   outline : 2px solid cyan;
