@@ -13,23 +13,61 @@ function MensSection(){
             <div className = "filters">
                 <div className = "filter-1">
                     <p>Sort</p>
-                    <button>+</button>
+
+                    <select name = "sort1" id ="sortF1">
+                        <option hidden selected value = ""></option>
+                        <option disabled value = "sort">Sort</option>
+                        <option value = "default">Default</option>
+                        <option value = "lowToHigh">Price: Low to High</option>
+                        <option value = "highToLow">Price: High to Low</option>
+                    </select>
                 </div>
 
                 <div className = "filter-2">
                     <p>All Colors</p>
-                    <button>+</button>
+                    <select name = "sort2" id ="sortF2">
+                        <option hidden selected value = ""></option>
+                        <option value = "all">All Colors</option>
+                        <option value = "red">Red</option>
+                        <option value = "black">Black</option>
+                        <option value = "brown">Brown</option>
+                        <option value = "gold">Gold</option>
+                        <option value = "blue">Blue</option>
+                        <option value = "grey">Grey</option>
+                    </select>
                 </div>
 
                 <div className = "filter-3">
                     <p>All Brands</p>
-                    <button>+</button>
+                    <select name = "sort3" id ="sortF3">
+                        <option hidden selected value = ""></option>
+                        <option value = "all">All Brands</option>
+                        <option value = "jean">Jean Paul Gaultier</option>
+                        <option value = "alex">Alexander McQueen</option>
+                        <option value = "balen">Balenciaga</option>
+                        <option value = "bur">Burberry</option>
+                        <option value = "dolce">Dolce Gabbana</option>
+                        <option value = "dries">Dries Van Noten</option>
+                        <option value = "gucci">Gucci</option>
+                        <option value = "nike">Nike</option>
+                        <option value = "raf">Raf Simons</option>
+                        <option value = "under">Undercover</option>
+                        <option value = "yohji">Yohji Yamamoto</option>
+                    </select>
                 </div>
 
                 <div className = "filter-4">
                     <p>All Types</p>
-                    <button>+</button>
+                    <select name = "sort2" id ="sortF2">
+                        <option hidden selected value = ""></option>
+                        <option value = "all">All Types</option>
+                        <option value = "top">Top</option>
+                        <option value = "shoes">Shoes</option>
+                        <option value = "acc">Accessories</option>
+                        <option value = "bottom">Bottom</option>
+                    </select>
                 </div>
+
             </div>
 
         </div>
