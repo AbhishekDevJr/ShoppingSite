@@ -4,13 +4,23 @@ import {useEffect} from 'react';
 
 function MensSection(){
 
-    function handlePointerOver(event){
-        event.target.style.opacity = '0.2';
-        console.log('Event Object-->',event);
+    function handlePointerEnter(event){
+        event.preventDefault();
+        event.stopPropagation();
+        console.log('Event-->', event.currentTarget, event.currentTarget.lastChild);
+        event.currentTarget.lastChild.style.backgroundColor = 'white';
+        event.currentTarget.lastChild.style.color = 'gray';
+        // event.currentTarget.lastChild.style.padding = '10px 0 10px 0';
+        let infoDiv = document.querySelector('#absP');
+        infoDiv.style.display = 'flex';
     }
 
     function handlePointerLeave(event){
-        event.target.style.opacity = 'initial';
+        let infoDiv = document.querySelector('#absP');
+        infoDiv.style.display = 'none';
+        event.currentTarget.lastChild.style.backgroundColor = 'inherit';
+        event.currentTarget.lastChild.style.color = 'inherit';
+        // event.currentTarget.lastChild.style.padding = 'inherit';
     }
 
     return(
@@ -77,14 +87,14 @@ function MensSection(){
 
         </div>
         <div className = "product-catalogue-container">
-                <div className = "product1" onMouseEnter={handlePointerOver} onMouseLeave = {handlePointerLeave}>
+                <div className = "product1" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img1.jpeg" alt = "Red Faces Shirt" />
                     <div id = "absP">
                         <h3>Red Faces Shirt</h3>
                         <p>Jean Paul Gaultier</p>
                         <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
                     </div>
-                    <p>$2552.99</p>
+                    <p class = "price">$2552.99</p>
                 </div>
 
                 <div className = "product2">
