@@ -82,7 +82,7 @@ function MensSection(){
                     <div id = "absP">
                         <h3>Red Faces Shirt</h3>
                         <p>Jean Paul Gaultier</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
                     </div>
                     <p>$2552.99</p>
                 </div>
