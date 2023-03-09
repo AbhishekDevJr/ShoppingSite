@@ -4,19 +4,34 @@ import {useEffect} from 'react';
 
 function MensSection(){
 
-    //Fetches the HTML Node on which event was triggered and renders the Info child div
+    //Fetches the HTML Node on which event was triggered & Applies hover styles to child elements
     function handlePointerEnter(event){
         event.preventDefault();
         event.stopPropagation();
-        // console.log('Event-->', event.currentTarget, event.currentTarget.lastChild, event.currentTarget.firstChild.nextSibling);
+        // console.log('Event-->', event.currentTarget, event.currentTarget.lastChild, event.currentTarget.firstChild);
+
+        //Product Info Div
         event.currentTarget.firstChild.nextSibling.style.display = 'flex';
+
+        //Product Img element
+        event.currentTarget.firstChild.style.transform = 'scale(1.1)';
+
+        //Product Price p element
         event.currentTarget.lastChild.style.backgroundColor = 'white';
         event.currentTarget.lastChild.style.color = 'gray';
+        event.currentTarget.lastChild.style.zIndex = '100';
     }
 
-    //Fetches the HTML Node on which event was triggered and removes the Info child div
+    //Fetches the HTML Node on which event was triggered & Removes hover styles to child elements
     function handlePointerLeave(event){
+
+        //Product Info Div
         event.currentTarget.firstChild.nextSibling.style.display = 'none';
+
+        //Product Img element
+        event.currentTarget.firstChild.style.transform = 'scale(1)';
+
+        //Product Price p element
         event.currentTarget.lastChild.style.backgroundColor = 'inherit';
         event.currentTarget.lastChild.style.color = 'inherit';
     }
