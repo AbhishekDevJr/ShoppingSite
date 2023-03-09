@@ -265,9 +265,11 @@ select{
   background-color : black;
   color : white;
   padding : 80px 100px 100px 100px;
+  cursor : pointer;
+  position : relative;
 }
 
-.product-catalogue-container div{
+.productCommonStyle{
   height : 480px;
   display : flex;
   flex-direction : column;
@@ -289,16 +291,16 @@ select{
   opacity : 0.8;
 }
 
-.product1{
+.productCommonStyle{
   cursor : pointer;
   position : relative;
 }
 
-#absP{
+.product-info{
   width : 100%;
   position : absolute;
   background-color : black;
-  height : 210px;
+  height : 210px !important;
   bottom : 48px;
   padding : 60px 20px 40px 20px;
   display : none;
@@ -307,12 +309,13 @@ select{
   align-items : flex-start;
 }
 
-#absP h3, #absP p{
+.product-info h3, .product-info p{
+  width : 100%;
   margin : 0;
   padding : 0;
 }
 
-#absP p{
+.product-info p{
   font-size : 14px;
   margin-top : 5px;
 }

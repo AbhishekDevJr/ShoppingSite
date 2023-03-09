@@ -4,23 +4,21 @@ import {useEffect} from 'react';
 
 function MensSection(){
 
+    //Fetches the HTML Node on which event was triggered and renders the Info child div
     function handlePointerEnter(event){
         event.preventDefault();
         event.stopPropagation();
-        console.log('Event-->', event.currentTarget, event.currentTarget.lastChild);
+        // console.log('Event-->', event.currentTarget, event.currentTarget.lastChild, event.currentTarget.firstChild.nextSibling);
+        event.currentTarget.firstChild.nextSibling.style.display = 'flex';
         event.currentTarget.lastChild.style.backgroundColor = 'white';
         event.currentTarget.lastChild.style.color = 'gray';
-        // event.currentTarget.lastChild.style.padding = '10px 0 10px 0';
-        let infoDiv = document.querySelector('#absP');
-        infoDiv.style.display = 'flex';
     }
 
+    //Fetches the HTML Node on which event was triggered and removes the Info child div
     function handlePointerLeave(event){
-        let infoDiv = document.querySelector('#absP');
-        infoDiv.style.display = 'none';
+        event.currentTarget.firstChild.nextSibling.style.display = 'none';
         event.currentTarget.lastChild.style.backgroundColor = 'inherit';
         event.currentTarget.lastChild.style.color = 'inherit';
-        // event.currentTarget.lastChild.style.padding = 'inherit';
     }
 
     return(
@@ -87,84 +85,154 @@ function MensSection(){
 
         </div>
         <div className = "product-catalogue-container">
-                <div className = "product1" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
+                <div className = "product1 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img1.jpeg" alt = "Red Faces Shirt" />
-                    <div id = "absP">
+                    <div className = "product-info">
                         <h3>Red Faces Shirt</h3>
                         <p>Jean Paul Gaultier</p>
                         <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
                     </div>
-                    <p class = "price">$2552.99</p>
+                    <p className = "price">$2552.99</p>
                 </div>
 
-                <div className = "product2">
+                <div className = "product2 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img2.jpeg" alt = "Butterfly Suit" />
-                    <p>$979.99</p>
+                    <div className = "product-info">
+                        <h3>Butterfly Suit</h3>
+                        <p>Alexander McQueen</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$979.99</p>
                 </div>
 
-                <div className = "product3">
+                <div className = "product3 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img id = "testImg" src = "product-img3.jpeg" alt = "Balenciaga Boots" />
-                    <p>$797.99</p>
+                    <div className = "product-info">
+                        <h3>Balenciaga Boots</h3>
+                        <p>Balenciaga</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$797.99</p>
                 </div>
 
-                <div className = "product4">
+                <div className = "product4 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img4.jpeg" alt = "Burberry Jacket" />
-                    <p>$779.99</p>
+                    <div className = "product-info">
+                        <h3>Burberry Jacket</h3>
+                        <p>Burberry</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$779.99</p>
                 </div>
 
-                <div className = "product5">
+                <div className = "product5 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img5.jpeg" alt = "Gold Leaf Jacket" />
-                    <p>$3779.99</p>
+                    <div className = "product-info">
+                        <h3>Gold Leaf Jacket</h3>
+                        <p>Dolce & Gabbana</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$3779.99</p>
                 </div>
 
-                <div className = "product6">
+                <div className = "product6 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img6.jpeg" alt = "Snake Coat" />
-                    <p>$3779.99</p>
+                    <div className = "product-info">
+                        <h3>Snake Coat</h3>
+                        <p>Dries Van Noten</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$3779.99</p>
                 </div>
 
-                <div className = "product7">
+                <div className = "product7 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img7.jpeg" alt = "Bee Pin" />
-                    <p>$279.99</p>
+                    <div className = "product-info">
+                        <h3>Bee Pin</h3>
+                        <p>Gucci</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$279.99</p>
                 </div>
 
-                <div className = "product8">
+                <div className = "product8 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img8.jpeg" alt = "React Shoes" />
-                    <p>$349.99</p>
+                    <div className = "product-info">
+                        <h3>React Shoes</h3>
+                        <p>Nike</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$349.99</p>
                 </div>
 
-                <div className = "product9">
+                <div className = "product9 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img9.jpeg" alt = "Potrait Jacket" />
-                    <p>$6349.99</p>
+                    <div className = "product-info">
+                        <h3>Potrait Jacket</h3>
+                        <p>Raf Simons</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$6349.99</p>
                 </div>
 
-                <div className = "product10">
+                <div className = "product10 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img10.jpeg" alt = "Red Girl Shirt" />
-                    <p>$1349.99</p>
+                    <div className = "product-info">
+                        <h3>Red Girl Shirt</h3>
+                        <p>Raf Simons</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$1349.99</p>
                 </div>
 
-                <div className = "product11">
+                <div className = "product11 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img11.jpeg" alt = "RS Pink Jacket" />
-                    <p>$1149.99</p>
+                    <div className = "product-info">
+                        <h3>RS Pink Jacket</h3>
+                        <p>Raf Simons</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$1149.99</p>
                 </div>
 
-                <div className = "product12">
+                <div className = "product12 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img12.jpeg" alt = "Playing Card Pants" />
-                    <p>$949.99</p>
+                    <div className = "product-info">
+                        <h3>Playing Card Pants</h3>
+                        <p>Undercover</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$949.99</p>
                 </div>
 
-                <div className = "product13">
+                <div className = "product13 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img13.jpeg" alt = "Castle Backpack" />
-                    <p>$699.99</p>
+                    <div className = "product-info">
+                        <h3>Castle Backpack</h3>
+                        <p>Undercover</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$699.99</p>
                 </div>
 
-                <div className = "product14">
+                <div className = "product14 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img14.jpeg" alt = "Black Potrait Jacket" />
-                    <p>$1299.99</p>
+                    <div className = "product-info">
+                        <h3>Black Potrait Jacket</h3>
+                        <p>Undercover</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$1299.99</p>
                 </div>
 
-                <div className = "product15">
+                <div className = "product15 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                     <img src = "product-img15.jpeg" alt = "Face Long Sleeve" />
-                    <p>$699.99</p>
+                    <div className = "product-info">
+                        <h3>Face Long Sleeve</h3>
+                        <p>Yohji Yamamoto</p>
+                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
+                    </div>
+                    <p className = "price">$699.99</p>
                 </div>
             </div>
         </div>
