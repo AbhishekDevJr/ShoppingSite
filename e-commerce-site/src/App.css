@@ -249,7 +249,7 @@ video {
 }
 
 select{
-  background-color : black;
+  background-color :rgb(0, 0, 0);
   border : none;
   color : white;
   width : 200px;
@@ -265,7 +265,6 @@ select{
   background-color : black;
   color : white;
   padding : 80px 100px 100px 100px;
-  cursor : pointer;
   position : relative;
 }
 

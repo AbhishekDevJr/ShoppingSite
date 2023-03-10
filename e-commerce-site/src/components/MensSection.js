@@ -5,39 +5,39 @@ import {useEffect} from 'react';
 function MensSection(){
 
     const [someProductArray, setSomeProductArray] = useState([
-{src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier'}, 
-{src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen'},
-{src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga'},
-{src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry'},
-{src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana'},
-{src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten'},
-{src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci'},
-{src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike'},
-{src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons'},
-{src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons'},
-{src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons'},
-{src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover'},
-{src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover'},
-{src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover'},
-{src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto'},
+        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean'}, 
+        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex'},
+        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen'},
+        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur'},
+        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce'},
+        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries'},
+        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci'},
+        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike'},
+        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf'},
+        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
+        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
+        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under'},
+        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under'},
+        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under'},
+        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji'},
     ]);
 
     let productArray = [
-        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier'}, 
-        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen'},
-        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga'},
-        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry'},
-        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana'},
-        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten'},
-        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci'},
-        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike'},
-        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons'},
-        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons'},
-        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons'},
-        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover'},
-        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover'},
-        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover'},
-        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto'},
+        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean'}, 
+        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex'},
+        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen'},
+        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur'},
+        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce'},
+        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries'},
+        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci'},
+        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike'},
+        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf'},
+        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
+        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
+        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under'},
+        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under'},
+        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under'},
+        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji'},
     ];
 
     
@@ -119,6 +119,69 @@ function MensSection(){
         }
     }
 
+    //Rerenders Product Catalogue based on Filter applied by the User by changing State Array variable
+    function handleF2Select(event){
+        // console.log(event, event.target, event.currentTarget, event.target.value);
+        let ogProductArray = [...productArray];
+        let tempProductArrayF2 = [...productArray];
+
+        if(event.target.value === 'all'){
+            setSomeProductArray(ogProductArray);
+        }
+        else if(event.target.value === 'red'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'red'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'black'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'black'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'brown'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'brown'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'gold'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'gold'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'blue'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'blue'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'grey'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'grey'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray);
+        }
+    }
+
+    function handleF3Select(event){
+        console.log(event, event.target, event.currentTarget, event.target.value);
+    }
+
     return(
         <div className = "mens">
         <div className = "mens-section">
@@ -139,7 +202,7 @@ function MensSection(){
 
                 <div className = "filter-2">
                     
-                    <select name = "sort2" id ="sortF2">
+                    <select name = "sort2" id ="sortF2" onChange = {handleF2Select}>
                         <option value = "all">All Colors</option>
                         <option value = "red">Red</option>
                         <option value = "black">Black</option>
@@ -152,7 +215,7 @@ function MensSection(){
 
                 <div className = "filter-3">
                     
-                    <select name = "sort3" id ="sortF3">
+                    <select name = "sort3" id ="sortF3" onChange = {handleF3Select}>
                         <option value = "all">All Brands</option>
                         <option value = "jean">Jean Paul Gaultier</option>
                         <option value = "alex">Alexander McQueen</option>
@@ -170,7 +233,7 @@ function MensSection(){
 
                 <div className = "filter-4">
                     
-                    <select name = "sort2" id ="sortF2">
+                    <select name = "sort2" id ="sortF4">
                         <option value = "all">All Types</option>
                         <option value = "top">Top</option>
                         <option value = "shoes">Shoes</option>
