@@ -269,6 +269,10 @@ select{
   position : relative;
 }
 
+.product4{
+  outline : 1px solid cyan;
+}
+
 .productCommonStyle{
   overflow: hidden;
   height : 480px;

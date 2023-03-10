@@ -4,6 +4,45 @@ import {useEffect} from 'react';
 
 function MensSection(){
 
+    const [someProductArray, setSomeProductArray] = useState([
+{src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier'}, 
+{src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen'},
+{src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga'},
+{src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry'},
+{src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana'},
+{src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten'},
+{src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci'},
+{src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike'},
+{src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons'},
+{src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons'},
+{src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons'},
+{src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover'},
+{src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover'},
+{src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover'},
+{src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto'},
+    ]);
+
+    let productArray = [
+        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier'}, 
+        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen'},
+        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga'},
+        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry'},
+        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana'},
+        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten'},
+        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci'},
+        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike'},
+        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons'},
+        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons'},
+        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons'},
+        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover'},
+        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover'},
+        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover'},
+        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto'},
+    ];
+
+    
+
+
     //Fetches the HTML Node on which event was triggered & Applies hover styles to child elements
     function handlePointerEnter(event){
         event.preventDefault();
@@ -36,6 +75,50 @@ function MensSection(){
         event.currentTarget.lastChild.style.color = 'inherit';
     }
 
+    //Rerenders the Product Catalogue by change State Array according to user Filter Choice
+    function handleSelect(event){
+        console.log(event.target, event.currentTarget, event.target.value);
+        let tempProductArray = [...someProductArray];
+
+        if(event.target.value === 'sort' || event.target.value === 'default'){
+            setSomeProductArray(productArray);
+        }
+        else if(event.target.value === 'lowToHigh'){
+            console.log('Getting in lowTohigh block');
+            tempProductArray.sort((a, b) => {
+                a = Number(a.price);
+                b = Number(b.price);
+                if(a > b){
+                    return 1;
+                }
+                else if(a === b){
+                    return 0;
+                }
+                else{
+                    return -1;
+                }
+            });
+            console.log(productArray);
+            setSomeProductArray(tempProductArray);
+        }
+        else if(event.target.value === 'highToLow'){
+            tempProductArray.sort((a, b) => {
+                a = Number(a.price);
+                b = Number(b.price);
+                if(a > b){
+                    return -1;
+                }
+                else if(a === b){
+                    return 0
+                }
+                else{
+                    return 1;
+                }
+            });
+            setSomeProductArray(tempProductArray);
+        }
+    }
+
     return(
         <div className = "mens">
         <div className = "mens-section">
@@ -46,7 +129,7 @@ function MensSection(){
             <div className = "filters">
                 <div className = "filter-1">
 
-                    <select name = "sort1" id ="sortF1">
+                    <select name = "sort1" id ="sortF1" onChange = {handleSelect}>
                         <option value = "sort">Sort</option>
                         <option value = "default">Default</option>
                         <option value = "lowToHigh">Price: Low to High</option>
@@ -100,155 +183,19 @@ function MensSection(){
 
         </div>
         <div className = "product-catalogue-container">
-                <div className = "product1 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img1.jpeg" alt = "Red Faces Shirt" />
-                    <div className = "product-info">
-                        <h3>Red Faces Shirt</h3>
-                        <p>Jean Paul Gaultier</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$2552.99</p>
+                {someProductArray.map((item, index) => {
+                    return(
+            <div key = {index} className = "productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
+                <img src = {item.src} alt = {item.h3} />
+                <div className = "product-info">
+                    <h3>{item.h3}</h3>
+                    <p>{item.p1}</p>
+                    <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
                 </div>
-
-                <div className = "product2 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img2.jpeg" alt = "Butterfly Suit" />
-                    <div className = "product-info">
-                        <h3>Butterfly Suit</h3>
-                        <p>Alexander McQueen</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$979.99</p>
-                </div>
-
-                <div className = "product3 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img id = "testImg" src = "product-img3.jpeg" alt = "Balenciaga Boots" />
-                    <div className = "product-info">
-                        <h3>Balenciaga Boots</h3>
-                        <p>Balenciaga</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$797.99</p>
-                </div>
-
-                <div className = "product4 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img4.jpeg" alt = "Burberry Jacket" />
-                    <div className = "product-info">
-                        <h3>Burberry Jacket</h3>
-                        <p>Burberry</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$779.99</p>
-                </div>
-
-                <div className = "product5 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img5.jpeg" alt = "Gold Leaf Jacket" />
-                    <div className = "product-info">
-                        <h3>Gold Leaf Jacket</h3>
-                        <p>Dolce & Gabbana</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$3779.99</p>
-                </div>
-
-                <div className = "product6 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img6.jpeg" alt = "Snake Coat" />
-                    <div className = "product-info">
-                        <h3>Snake Coat</h3>
-                        <p>Dries Van Noten</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$3779.99</p>
-                </div>
-
-                <div className = "product7 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img7.jpeg" alt = "Bee Pin" />
-                    <div className = "product-info">
-                        <h3>Bee Pin</h3>
-                        <p>Gucci</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$279.99</p>
-                </div>
-
-                <div className = "product8 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img8.jpeg" alt = "React Shoes" />
-                    <div className = "product-info">
-                        <h3>React Shoes</h3>
-                        <p>Nike</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$349.99</p>
-                </div>
-
-                <div className = "product9 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img9.jpeg" alt = "Potrait Jacket" />
-                    <div className = "product-info">
-                        <h3>Potrait Jacket</h3>
-                        <p>Raf Simons</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$6349.99</p>
-                </div>
-
-                <div className = "product10 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img10.jpeg" alt = "Red Girl Shirt" />
-                    <div className = "product-info">
-                        <h3>Red Girl Shirt</h3>
-                        <p>Raf Simons</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$1349.99</p>
-                </div>
-
-                <div className = "product11 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img11.jpeg" alt = "RS Pink Jacket" />
-                    <div className = "product-info">
-                        <h3>RS Pink Jacket</h3>
-                        <p>Raf Simons</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$1149.99</p>
-                </div>
-
-                <div className = "product12 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img12.jpeg" alt = "Playing Card Pants" />
-                    <div className = "product-info">
-                        <h3>Playing Card Pants</h3>
-                        <p>Undercover</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$949.99</p>
-                </div>
-
-                <div className = "product13 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img13.jpeg" alt = "Castle Backpack" />
-                    <div className = "product-info">
-                        <h3>Castle Backpack</h3>
-                        <p>Undercover</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$699.99</p>
-                </div>
-
-                <div className = "product14 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img14.jpeg" alt = "Black Potrait Jacket" />
-                    <div className = "product-info">
-                        <h3>Black Potrait Jacket</h3>
-                        <p>Undercover</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$1299.99</p>
-                </div>
-
-                <div className = "product15 productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
-                    <img src = "product-img15.jpeg" alt = "Face Long Sleeve" />
-                    <div className = "product-info">
-                        <h3>Face Long Sleeve</h3>
-                        <p>Yohji Yamamoto</p>
-                        <p id = "smallP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nemo!</p>
-                    </div>
-                    <p className = "price">$699.99</p>
-                </div>
+                <p className = "price">${item.price}</p>
+            </div>
+                    );
+                })}
             </div>
         </div>
     );
