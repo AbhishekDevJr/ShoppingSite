@@ -77,14 +77,15 @@ function MensSection(){
 
     //Rerenders the Product Catalogue by change State Array according to user Filter Choice
     function handleSelect(event){
-        console.log(event.target, event.currentTarget, event.target.value);
+        // console.log(event.target, event.currentTarget, event.target.value);
+        // let tempOgProductArray = [...someProductArray];
         let tempProductArray = [...someProductArray];
 
         if(event.target.value === 'sort' || event.target.value === 'default'){
             setSomeProductArray(productArray);
         }
         else if(event.target.value === 'lowToHigh'){
-            console.log('Getting in lowTohigh block');
+            // console.log('Getting in lowTohigh block');
             tempProductArray.sort((a, b) => {
                 a = Number(a.price);
                 b = Number(b.price);
@@ -98,7 +99,7 @@ function MensSection(){
                     return -1;
                 }
             });
-            console.log(productArray);
+            // console.log(productArray);
             setSomeProductArray(tempProductArray);
         }
         else if(event.target.value === 'highToLow'){
@@ -280,6 +281,50 @@ function MensSection(){
         }
     }
 
+    function handleF4Select(event){
+        console.log(event, event.target, event.currentTarget, event.target.value);
+
+        let tempProductArrayF4 = [...productArray];
+        let filteredProductArray3 = tempProductArrayF4;
+
+        if(event.target.value === 'all'){
+            filteredProductArray3 = [...productArray];
+            setSomeProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'top'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'top'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'shoes'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'shoes'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'acc'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'acc'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'bott'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'bott'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray3);
+        }
+    }
+
     return(
         <div className = "mens">
         <div className = "mens-section">
@@ -331,12 +376,12 @@ function MensSection(){
 
                 <div className = "filter-4">
                     
-                    <select name = "sort2" id ="sortF4">
+                    <select name = "sort2" id ="sortF4" onChange = {handleF4Select}>
                         <option value = "all">All Types</option>
                         <option value = "top">Top</option>
                         <option value = "shoes">Shoes</option>
                         <option value = "acc">Accessories</option>
-                        <option value = "bottom">Bottom</option>
+                        <option value = "bott">Bottom</option>
                     </select>
                 </div>
 

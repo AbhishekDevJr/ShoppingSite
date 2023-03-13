@@ -334,6 +334,37 @@ select{
   margin-top : 10px !important;
 }
 
+.about{
+  min-height : 100vh;
+  background-image : linear-gradient(to top,#000000c6,transparent),url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\aboutCover.jpg);
+  background-position: center;
+  background-size : cover;
+  background-repeat: no-repeat;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+
+.about-info{
+  margin-top : -50px;
+  width : 550px;
+  text-align : center;
+  font-family : 'Didact Gothic', sans-serif;
+  color : white;
+}
+
+.about-info h1{
+  font-size : 50px;
+  letter-spacing : 8px;
+  word-spacing: 10px;
+  font-weight : 400;
+}
+
+.about-info p{
+  margin-top : -20px;
+}
+
 @media(max-width : 768px){
 
 }
