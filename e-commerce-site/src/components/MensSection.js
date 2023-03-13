@@ -5,39 +5,39 @@ import {useEffect} from 'react';
 function MensSection(){
 
     const [someProductArray, setSomeProductArray] = useState([
-        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean'}, 
-        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex'},
-        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen'},
-        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur'},
-        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce'},
-        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries'},
-        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci'},
-        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike'},
-        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf'},
-        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
-        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
-        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under'},
-        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under'},
-        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under'},
-        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji'},
+        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean', type : 'top'}, 
+        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex', type : 'top'},
+        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen', type : 'shoes'},
+        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur', type : 'top'},
+        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'top'},
+        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries', type : 'top'},
+        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci', type : 'acc'},
+        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike', type : 'shoes'},
+        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf', type : 'top'},
+        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
+        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
+        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under', type : 'bott'},
+        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under', type : 'acc'},
+        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under', type : 'top'},
+        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji', type : 'top'},
     ]);
 
     let productArray = [
-        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean'}, 
-        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex'},
-        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen'},
-        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur'},
-        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce'},
-        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries'},
-        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci'},
-        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike'},
-        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf'},
-        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
-        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf'},
-        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under'},
-        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under'},
-        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under'},
-        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji'},
+        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean', type : 'top'}, 
+        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex', type : 'top'},
+        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen', type : 'shoes'},
+        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur', type : 'top'},
+        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'top'},
+        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries', type : 'top'},
+        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci', type : 'acc'},
+        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike', type : 'shoes'},
+        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf', type : 'top'},
+        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
+        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
+        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under', type : 'bott'},
+        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under', type : 'acc'},
+        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under', type : 'top'},
+        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji', type : 'top'},
     ];
 
     
@@ -122,11 +122,12 @@ function MensSection(){
     //Rerenders Product Catalogue based on Filter applied by the User by changing State Array variable
     function handleF2Select(event){
         // console.log(event, event.target, event.currentTarget, event.target.value);
-        let ogProductArray = [...productArray];
+        // let ogProductArray = [...productArray];
         let tempProductArrayF2 = [...productArray];
 
         if(event.target.value === 'all'){
-            setSomeProductArray(ogProductArray);
+            let filteredProductArray = [...productArray];
+            setSomeProductArray(filteredProductArray);
         }
         else if(event.target.value === 'red'){
             let filteredProductArray = tempProductArrayF2.filter((item) => {
@@ -178,8 +179,105 @@ function MensSection(){
         }
     }
 
+    //ReRenders Product Catalogue with filtered products based on filter applied by the User
     function handleF3Select(event){
-        console.log(event, event.target, event.currentTarget, event.target.value);
+        // console.log(event, event.target, event.currentTarget, event.target.value);
+        // let ogProductArray2 = [...productArray];
+        let tempProductArrayF3 = [...productArray];
+        let filteredProductArray2 = tempProductArrayF3;
+
+        if(event.target.value === 'all'){
+            filteredProductArray2 = [...productArray];
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'jean'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'jean'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'alex'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'alex'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'balen'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'balen'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'bur'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'bur'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'dolce'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'dolce'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'dries'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'dries'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'gucci'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'gucci'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'nike'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'nike'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'raf'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'raf'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'under'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'under'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'yohji'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'yohji'){
+                    return item;
+                }
+            });
+            setSomeProductArray(filteredProductArray2);
+        }
     }
 
     return(
