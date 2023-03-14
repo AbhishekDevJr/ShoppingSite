@@ -13,7 +13,12 @@ https://user-images.githubusercontent.com/101062487/223479864-e3078490-db31-4fef
 <br>
 <br>
 <br>
-
-<video autoPlay = "autoplay" muted loop className = "video">
-        <source src = "e-comm-HeroVideo.mp4" type = "video/mp4"></source>
-</video>
+<!-- WebApp SS Here -->
+<br>
+<br>
+<br>
+<!-- WebApp SS Here -->
+<br>
+<br>
+<br>
+<!-- WebApp SS Here -->
