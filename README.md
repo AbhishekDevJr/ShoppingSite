@@ -13,13 +13,13 @@ https://user-images.githubusercontent.com/101062487/223479864-e3078490-db31-4fef
 <br>
 <br>
 <br>
-![MensSectionSS](https://user-images.githubusercontent.com/101062487/225107155-fe55a36f-b3f9-4b2f-9680-8fc9904e276a.png)
+https://user-images.githubusercontent.com/101062487/225107155-fe55a36f-b3f9-4b2f-9680-8fc9904e276a.png
 <br>
 <br>
 <br>
-![WomensSectionSS](https://user-images.githubusercontent.com/101062487/225107214-28ff0475-5f37-4377-9b17-8404b9eb5a76.png)
+https://user-images.githubusercontent.com/101062487/225107214-28ff0475-5f37-4377-9b17-8404b9eb5a76.png
 <br>
 <br>
 <br>
-![AboutSectionSS](https://user-images.githubusercontent.com/101062487/225107272-50b5e7c8-2cb1-434c-a3ae-b79cd06858c2.png)
+https://user-images.githubusercontent.com/101062487/225107272-50b5e7c8-2cb1-434c-a3ae-b79cd06858c2.png
 
