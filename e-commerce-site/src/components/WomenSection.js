@@ -4,22 +4,46 @@ import {useState, useEffect} from 'react';
 function WomenSection(){
 
     const [womensProductArray, setWomensProductArray] = useState([
-        {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean', type : 'top'}, 
-        {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex', type : 'top'},
-        {src : 'product-img3.jpeg', price : '797.99', h3 : 'Balenciaga Boots', p1 : 'Balenciaga', color : 'black', alias : 'balen', type : 'shoes'},
-        {src : 'product-img4.jpeg', price : '779.99', h3 : 'Burberry Jacket', p1 : 'Burberry', color : 'brown', alias : 'bur', type : 'top'},
-        {src : 'product-img5.jpeg', price : '3779.99', h3 : 'Gold Leaf Jacket', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'top'},
-        {src : 'product-img6.jpeg', price : '3779.99', h3 : 'Snake Coat', p1 : 'Dries Van Noten', color : 'blue', alias : 'dries', type : 'top'},
-        {src : 'product-img7.jpeg', price : '279.99', h3 : 'Bee Pin', p1 : 'Gucci', color : 'gold', alias : 'gucci', type : 'acc'},
-        {src : 'product-img8.jpeg', price : '349.99', h3 : 'React Shoes', p1 : 'Nike', color : 'red', alias : 'nike', type : 'shoes'},
-        {src : 'product-img9.jpeg', price : '6349.99', h3 : 'Potrait Jacket', p1 : 'Raf Simons', color : 'black', alias : 'raf', type : 'top'},
-        {src : 'product-img10.jpeg', price : '1349.99', h3 : 'Red Girl Shirt', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
-        {src : 'product-img11.jpeg', price : '1149.99', h3 : 'RS Pink Jacket', p1 : 'Raf Simons', color : 'red', alias : 'raf', type : 'top'},
-        {src : 'product-img12.jpeg', price : '949.99', h3 : 'Playing Card Pants', p1 : 'Undercover', color : 'black', alias : 'under', type : 'bott'},
-        {src : 'product-img13.jpeg', price : '699.99', h3 : 'Castle Backpack', p1 : 'Undercover', color : 'grey', alias : 'under', type : 'acc'},
-        {src : 'product-img14.jpeg', price : '1299.99', h3 : 'Black Potrait Jacket', p1 : 'Undercover', color : 'filter', alias : 'under', type : 'top'},
-        {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji', type : 'top'},
+        {src : 'w-product-img1.jpeg', price : '1849.99', h3 : 'Black Snake Dress', p1 : 'Gucci', color : 'black', alias : 'gucci', type : 'top'}, 
+        {src : 'w-product-img2.jpeg', price : '1379.99', h3 : 'Tattered Silk Coat', p1 : 'Maison Margiela', color : 'black', alias : 'maison', type : 'top'},
+        {src : 'w-product-img3.jpeg', price : '859.99', h3 : 'Royal Gold Gown', p1 : 'Luisa Beccaria', color : 'blue', alias : 'luisa', type : 'top'},
+        {src : 'w-product-img4.jpeg', price : '1319.99', h3 : 'Fine Ripped Shirt', p1 : 'Maison Margiela', color : 'black', alias : 'maison', type : 'top'},
+        {src : 'w-product-img5.jpeg', price : '2899.99', h3 : 'Renaissance Dress', p1 : 'Simone Rocha', color : 'white', alias : 'simone', type : 'top'},
+        {src : 'w-product-img6.jpeg', price : '6599.99', h3 : 'Black Buttoned Overcoat', p1 : 'Yohji Yamamoto', color : 'black', alias : 'yohji', type : 'top'},
+        {src : 'w-product-img7.jpeg', price : '779.99', h3 : 'Black Layered Top', p1 : 'Anne Sofie Madsen', color : 'black', alias : 'anne', type : 'top'},
+        {src : 'w-product-img8.jpeg', price : '579.99', h3 : 'White Bracelet Sneakers', p1 : 'Comme De Garcons', color : 'white', alias : 'comme', type : 'shoes'},
+        {src : 'w-product-img9.jpeg', price : '739.99', h3 : 'Gold and Black Heels', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'shoes'},
+        {src : 'w-product-img10.jpeg', price : '1239.99', h3 : 'Gold and Pink Floral Heels', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'shoes'},
+        {src : 'w-product-img11.jpeg', price : '669.99', h3 : 'Stitched Mouse Top', p1 : 'Dolce & Gabbana', color : 'white', alias : 'dolce', type : 'top'},
+        {src : 'w-product-img12.jpeg', price : '279.99', h3 : 'Black Emblem Bag', p1 : 'Jean Paul Gaultier', color : 'black', alias : 'jean', type : 'acc'},
+        {src : 'w-product-img13.jpeg', price : '339.99', h3 : 'Glitter Skull Bag', p1 : 'Manish Arora', color : 'blue', alias : 'manish', type : 'acc'},
+        {src : 'w-product-img14.jpeg', price : '489.99', h3 : 'Portrait Bag', p1 : 'Moschino', color : 'gold', alias : 'moschino', type : 'acc'},
+        {src : 'w-product-img15.jpeg', price : '1239.99', h3 : 'Gold Bow Heels', p1 : 'Versace', color : 'gold', alias : 'versace', type : 'shoes'},
+        {src : 'w-product-img16.jpeg', price : '2579.99', h3 : 'Black Lace Dress', p1 : 'Valentino', color : 'black', alias : 'valentino', type : 'top'},
+        {src : 'w-product-img17.jpeg', price : '899.99', h3 : 'Aged Snake Bag', p1 : 'Valentino', color : 'gold', alias : 'valentino', type : 'acc'},
+        {src : 'w-product-img18.jpeg', price : '1529.99', h3 : 'Transparent Stitched Dress', p1 : 'Valentino', color : 'grey', alias : 'valentino', type : 'top'},
     ]);
+
+    let ogWomensProductArray = [
+        {src : 'w-product-img1.jpeg', price : '1849.99', h3 : 'Black Snake Dress', p1 : 'Gucci', color : 'black', alias : 'gucci', type : 'top'}, 
+        {src : 'w-product-img2.jpeg', price : '1379.99', h3 : 'Tattered Silk Coat', p1 : 'Maison Margiela', color : 'black', alias : 'maison', type : 'top'},
+        {src : 'w-product-img3.jpeg', price : '859.99', h3 : 'Royal Gold Gown', p1 : 'Luisa Beccaria', color : 'blue', alias : 'luisa', type : 'top'},
+        {src : 'w-product-img4.jpeg', price : '1319.99', h3 : 'Fine Ripped Shirt', p1 : 'Maison Margiela', color : 'black', alias : 'maison', type : 'top'},
+        {src : 'w-product-img5.jpeg', price : '2899.99', h3 : 'Renaissance Dress', p1 : 'Simone Rocha', color : 'white', alias : 'simone', type : 'top'},
+        {src : 'w-product-img6.jpeg', price : '6599.99', h3 : 'Black Buttoned Overcoat', p1 : 'Yohji Yamamoto', color : 'black', alias : 'yohji', type : 'top'},
+        {src : 'w-product-img7.jpeg', price : '779.99', h3 : 'Black Layered Top', p1 : 'Anne Sofie Madsen', color : 'black', alias : 'anne', type : 'top'},
+        {src : 'w-product-img8.jpeg', price : '579.99', h3 : 'White Bracelet Sneakers', p1 : 'Comme De Garcons', color : 'white', alias : 'comme', type : 'shoes'},
+        {src : 'w-product-img9.jpeg', price : '739.99', h3 : 'Gold and Black Heels', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'shoes'},
+        {src : 'w-product-img10.jpeg', price : '1239.99', h3 : 'Gold and Pink Floral Heels', p1 : 'Dolce & Gabbana', color : 'gold', alias : 'dolce', type : 'shoes'},
+        {src : 'w-product-img11.jpeg', price : '669.99', h3 : 'Stitched Mouse Top', p1 : 'Dolce & Gabbana', color : 'white', alias : 'dolce', type : 'top'},
+        {src : 'w-product-img12.jpeg', price : '279.99', h3 : 'Black Emblem Bag', p1 : 'Jean Paul Gaultier', color : 'black', alias : 'jean', type : 'acc'},
+        {src : 'w-product-img13.jpeg', price : '339.99', h3 : 'Glitter Skull Bag', p1 : 'Manish Arora', color : 'blue', alias : 'manish', type : 'acc'},
+        {src : 'w-product-img14.jpeg', price : '489.99', h3 : 'Portrait Bag', p1 : 'Moschino', color : 'gold', alias : 'moschino', type : 'acc'},
+        {src : 'w-product-img15.jpeg', price : '1239.99', h3 : 'Gold Bow Heels', p1 : 'Versace', color : 'gold', alias : 'versace', type : 'shoes'},
+        {src : 'w-product-img16.jpeg', price : '2579.99', h3 : 'Black Lace Dress', p1 : 'Valentino', color : 'black', alias : 'valentino', type : 'top'},
+        {src : 'w-product-img17.jpeg', price : '899.99', h3 : 'Aged Snake Bag', p1 : 'Valentino', color : 'gold', alias : 'valentino', type : 'acc'},
+        {src : 'w-product-img18.jpeg', price : '1529.99', h3 : 'Transparent Stitched Dress', p1 : 'Valentino', color : 'grey', alias : 'valentino', type : 'top'},
+    ];
 
     //Fetches the HTML Node on which event was triggered & Applies hover styles to child elements
     function handlePointerEnter(event){
@@ -55,14 +79,213 @@ function WomenSection(){
 
     function handleSelectW1(event){
         //Do Something
+
+        let tempProductArray = [...womensProductArray];
+
+        if(event.target.value === 'sort' || event.target.value === 'default'){
+            setWomensProductArray(ogWomensProductArray);
+        }
+        else if(event.target.value === 'lowToHigh'){
+            // console.log('Getting in lowTohigh block');
+            tempProductArray.sort((a, b) => {
+                a = Number(a.price);
+                b = Number(b.price);
+                if(a > b){
+                    return 1;
+                }
+                else if(a === b){
+                    return 0;
+                }
+                else{
+                    return -1;
+                }
+            });
+            // console.log(productArray);
+            setWomensProductArray(tempProductArray);
+        }
+        else if(event.target.value === 'highToLow'){
+            tempProductArray.sort((a, b) => {
+                a = Number(a.price);
+                b = Number(b.price);
+                if(a > b){
+                    return -1;
+                }
+                else if(a === b){
+                    return 0
+                }
+                else{
+                    return 1;
+                }
+            });
+            setWomensProductArray(tempProductArray);
+        }
     }
 
     function handleF2SelectW2(event){
         //Do Something
+
+        let tempProductArrayF2 = [...ogWomensProductArray];
+
+        if(event.target.value === 'all'){
+            let filteredProductArray = [...ogWomensProductArray];
+            setWomensProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'black'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'black'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'gold'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'gold'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'white'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'white'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'blue'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'blue'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray);
+        }
+        else if(event.target.value === 'grey'){
+            let filteredProductArray = tempProductArrayF2.filter((item) => {
+                if(item.color === 'grey'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray);
+        }
     }
 
     function handleF3SelectW3(event){
         //Do Something
+
+        let tempProductArrayF3 = [...ogWomensProductArray];
+        let filteredProductArray2 = tempProductArrayF3;
+
+        if(event.target.value === 'all'){
+            filteredProductArray2 = [...ogWomensProductArray];
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'jean'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'jean'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'maison'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'maison'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'comme'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'comme'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'moschino'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'moschino'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'dolce'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'dolce'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'manish'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'manish'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'gucci'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'gucci'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'luisa'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'luisa'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'simone'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'simone'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'anne'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'anne'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'yohji'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'yohji'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'versace'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'versace'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
+        else if(event.target.value === 'valentino'){
+            filteredProductArray2 = tempProductArrayF3.filter((item) => {
+                if(item.alias === 'valentino'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray2);
+        }
     }
 
     function handleF4SelectW4(event){
@@ -110,9 +333,9 @@ function WomenSection(){
                     <option value = "anne">Anne Sofie Madsen</option>
                     <option value = "comme">Comme De Garcons</option>
                     <option value = "jean">Jean Paul Gaultier</option>
-                    <option value = "dolce">Dolce Gabbana</option>
+                    <option value = "dolce">Dolce & Gabbana</option>
                     <option value = "manish">Manish Arora</option>
-                    <option value = "moshchino">Moshchino</option>
+                    <option value = "moschino">Moschino</option>
                     <option value = "versace">Versace</option>
                     <option value = "valentino">Valentino</option>
                     <option value = "yohji">Yohji Yamamoto</option>
