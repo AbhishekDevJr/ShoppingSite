@@ -77,6 +77,7 @@ function WomenSection(){
         event.currentTarget.lastChild.style.color = 'inherit';
     }
 
+    //Function to Filter the ProductArray based on User Choice and ReRender Product Catalogue Section
     function handleSelectW1(event){
         //Do Something
 
@@ -121,6 +122,7 @@ function WomenSection(){
         }
     }
 
+    //Function to Filter the ProductArray based on User Choice and ReRender Product Catalogue Section
     function handleF2SelectW2(event){
         //Do Something
 
@@ -172,6 +174,7 @@ function WomenSection(){
         }
     }
 
+    //Function to Filter the ProductArray based on User Choice and ReRender Product Catalogue Section
     function handleF3SelectW3(event){
         //Do Something
 
@@ -288,8 +291,41 @@ function WomenSection(){
         }
     }
 
+    //Function to Filter the ProductArray based on User Choice and ReRender Product Catalogue Section
     function handleF4SelectW4(event){
         //Do Something
+
+        let tempProductArrayF4 = [...ogWomensProductArray];
+        let filteredProductArray3 = tempProductArrayF4;
+
+        if(event.target.value === 'all'){
+            filteredProductArray3 = [...ogWomensProductArray];
+            setWomensProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'top'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'top'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'shoes'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'shoes'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray3);
+        }
+        else if(event.target.value === 'acc'){
+            filteredProductArray3 = tempProductArrayF4.filter((item) => {
+                if(item.type === 'acc'){
+                    return item;
+                }
+            });
+            setWomensProductArray(filteredProductArray3);
+        }
     }
 
     return(
@@ -349,7 +385,6 @@ function WomenSection(){
                     <option value = "top">Top</option>
                     <option value = "shoes">Shoes</option>
                     <option value = "acc">Accessories</option>
-                    <option value = "bott">Bottom</option>
                 </select>
                 </div>
 
