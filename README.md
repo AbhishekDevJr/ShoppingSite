@@ -15,5 +15,5 @@ https://user-images.githubusercontent.com/101062487/223479864-e3078490-db31-4fef
 <br>
 
 <video autoPlay = "autoplay" muted loop className = "video">
-        <source src = "https://user-images.githubusercontent.com/101062487/223479864-e3078490-db31-4fef-a934-5dd56521b82a.mp4" type = "video/mp4"></source>
+        <source src = "e-comm-HeroVideo.mp4" type = "video/mp4"></source>
 </video>
