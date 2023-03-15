@@ -1,7 +1,7 @@
 
 <h1>Front-end React Web App(E-commerce site)</h1>
 
-<h1><a href = "https://e-comm-byabhishek.netlify.app/">Live Demo</a></h1>
+<h1><a target = "_blank" href = "https://e-comm-byabhishek.netlify.app/">Live Demo</a></h1>
 
 <div class = "project-info">
     <p>Built this project from scratch using ReactJs</p>
