@@ -64,7 +64,7 @@ function NavBar(){
 
                 <div className = "nav-row-2">
                     <div className = "row-2-contents">
-                    <Link to = "/">Home</Link>
+                        <Link to = "/">Home</Link>
                         <Link to = "/mens">Mens</Link>
                         <Link to = "/womens">Womens</Link>
                         <Link to = "/about">About</Link>

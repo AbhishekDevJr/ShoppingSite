@@ -405,6 +405,18 @@ select{
 
 @media(max-width : 500px){
 
+  video{
+    display : none;
+  }
+
+  .testView{
+    background-image : url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\pexels-frank-zienert-342113.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height : 100vh;
+  }
+
   .buttons{
     display : flex;
     flex-direction : column;

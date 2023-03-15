@@ -16,7 +16,7 @@ function RouteSwitch(){
             <BrowserRouter>
                 <NavBar />
                 <Routes>
-                    <Route path = "/" element = {<><HomeMainVideo /><Buttons /></>} />
+                    <Route path = "/" element = {<div className = "testView"><HomeMainVideo /><Buttons /></div>} />
                     <Route path = "/mens" element = {<><MensSection /></>} />
                     <Route path = "/womens" element = {<><WomenSection /></>} />
                     <Route path = "/about" element = {<><About /></>} />
