@@ -414,8 +414,16 @@ select{
 
 @media(max-width : 500px){
 
+  .video{
+    display : none;
+    width : 0;
+    height : 0;
+  }
+
   video{
     display : none;
+    width : 0px;
+    height : 0px;
   }
 
   .filters{
@@ -493,6 +501,16 @@ select{
   .product-catalogue-container{
     grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
     padding : 30px;
+  }
+
+  video{
+    display : none;
+    width : 0px;
+    height : 0px;
+  }
+
+  .video{
+    display : none;
   }
 }
 

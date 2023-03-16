@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {useState, useEffect} from 'react';
 
 function NavBar(){
-
-    // const [bgColor, setBgColor] = useState(false);
 
     window.addEventListener('scroll', () => {
         let navEle = document.querySelector('.nav-container');
@@ -18,17 +15,12 @@ function NavBar(){
 
     function handleOverlayOpen(event){
         const overlayEle = document.querySelector('.mobile-navigation');
-        overlayEle.style.width = '100%';
-        const buttonEles = document.querySelector('.buttons');
-        buttonEles.style.display = "none";
-        
+        overlayEle.style.width = '100%';   
     }
 
     function handleOverlayClose(event){
         const overlayEle = document.querySelector('.mobile-navigation');
         overlayEle.style.width = '0';
-        const buttonEles = document.querySelector('.buttons');
-        buttonEles.style.display = "flex";
     }
         return(
             <div className = "nav-container">
