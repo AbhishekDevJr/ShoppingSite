@@ -407,6 +407,7 @@ select{
 
   .filters select{
     width : 100px;
+    background-color : rgba(0, 0, 0, 0.501);
   }
 
 }
@@ -428,6 +429,10 @@ select{
     background-size: cover;
     background-repeat: no-repeat;
     height : 100vh;
+  }
+
+  .product-catalogue-container{
+    padding : 50px;
   }
 
   .buttons{
@@ -482,4 +487,18 @@ select{
     font-size : 34px;
   }
 
+}
+
+@media(max-width : 360px){
+  .product-catalogue-container{
+    grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
+    padding : 30px;
+  }
+}
+
+@media(min-width : 501px) and (max-width : 724px){
+  .product-catalogue-container{
+    padding-right : 150px;
+    padding-left : 150px;
+  }
 }
