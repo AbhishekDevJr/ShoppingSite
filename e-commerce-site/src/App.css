@@ -399,7 +399,15 @@ select{
   color : white;
 }
 
-@media(max-width : 768px){
+@media(max-width : 850px){
+  .filters{
+    width : 100%;
+  }
+  
+
+  .filters select{
+    width : 100px;
+  }
 
 }
 
@@ -409,8 +417,13 @@ select{
     display : none;
   }
 
+  .filters{
+    flex-direction : column;
+    height : 120px;
+  }
+
   .testView{
-    background-image : url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\pexels-frank-zienert-342113.jpg);
+    background-image : url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\pexels-hıdır-dedebey-15830691.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -425,11 +438,19 @@ select{
     height : 100px;
   } 
 
+  .buttons button{
+    background-color : rgba(0, 0, 0, 0.219);
+    border : 1px solid white;
+  }
+
   .row-1-contactInfo {
     display : flex;
     flex-direction : column;
     justify-content : space-between;
     align-items : center;
+    width : 100px;
+    text-align : center;
+    padding-top : 8px;
   }
 
   .row-1-contactInfo img {
