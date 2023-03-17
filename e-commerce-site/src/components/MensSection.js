@@ -328,16 +328,22 @@ function MensSection(props){
     }
 
     let productRouteLink = '';
+    let productSrc = '';
+    let productBrand = '';
+    let productPrice = '';
 
     function handleLinkClick(event){
         // event.preventDefault();
         event.stopPropagation();
-        // console.log('Product Link was clicked', event.target, event.currentTarget, event.target.value);
-        console.log('Product Link was clicked', event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent);
+        // console.log('Product Link was clicked', event.currentTarget.firstChild.lastChild.textContent);
+
         productRouteLink = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent;
-        productRouteLink = productRouteLink.replaceAll(' ', '');
-        console.log(productRouteLink, props.someFunction);
-        props.someFunction(productRouteLink);
+        productBrand = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.nextSibling.textContent;
+        productPrice = event.currentTarget.firstChild.lastChild.textContent;
+        productSrc = event.currentTarget.firstChild.firstChild.src;
+        console.log('Product Link was clicked', productRouteLink, productBrand, productPrice, productSrc);
+        
+        props.someFunction(productRouteLink, productBrand, productPrice, productSrc);
     }
 
     return(

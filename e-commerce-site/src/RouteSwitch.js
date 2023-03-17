@@ -14,9 +14,15 @@ function RouteSwitch(){
 
     const [someTruth, setSomeTruth] = useState(true);
     const [someTitle, setSomeTitle] = useState('');
+    const [productBrand, setProductBrand] = useState('');
+    const [productPrice, setProductPrice] = useState('');
+    const [productImgSrc, setProductImgSrc] = useState('');
 
-    function setProductPageTitle(someParam){
-        setSomeTitle(someParam);
+    function setProductPageTitle(selectedProductTitle, selectedProductBrand, selectedProductPrice, selectedProductImgSrc){
+        setSomeTitle(selectedProductTitle);
+        setProductBrand(selectedProductBrand);
+        setProductPrice(selectedProductPrice);
+        setProductImgSrc(selectedProductImgSrc);
         // return null;
     }
 
@@ -42,7 +48,7 @@ function RouteSwitch(){
                     <Route path = "/mens" element = {<><MensSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/womens" element = {<><WomenSection /></>} />
                     <Route path = "/about" element = {<><About /></>} />
-                    <Route path = "/productPage" element = {<><ProductPage title = {someTitle} /></>} />
+                    <Route path = "/productPage" element = {<><ProductPage title = {someTitle} brand = {productBrand} price = {productPrice} imgSrc = {productImgSrc} /></>} />
                 </Routes>
             </BrowserRouter>
         </div>
