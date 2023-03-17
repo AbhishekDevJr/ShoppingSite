@@ -404,6 +404,28 @@ select{
   text-decoration : none;
 }
 
+.productDiv{
+  display : flex;
+  flex-direction : row;
+  justify-content : space-between;
+  align-items : center;
+}
+
+.product-img{
+  width : 50%;
+  height : 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-info-div{
+  width : 50%;
+  height : 100vh;
+  color : white;
+  background-color : black;
+}
+
 @media(max-width : 850px){
   .filters{
     width : 100%;

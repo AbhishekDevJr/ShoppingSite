@@ -1,10 +1,15 @@
 import React from 'react';
 
 function ProductPage(props){
+
+    let styleObj = {
+        backgroundImage : `linear-gradient(transparent,95%,#000),linear-gradient(90deg,transparent,70%,#000),url(${props.imgSrc})`,
+    };
+
     return(
         <div className = "productDiv">
-            <div className = "product-img"></div>
-            <div className = "product-info">
+            <div style = {styleObj} className = "product-img"></div>
+            <div className = "product-info-div">
                 <div className = "product-info-top">
                     <p>{props.brand}</p>
                     <h1>{props.title}</h1>
