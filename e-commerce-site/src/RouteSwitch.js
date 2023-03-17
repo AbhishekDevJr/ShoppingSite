@@ -17,12 +17,14 @@ function RouteSwitch(){
     const [productBrand, setProductBrand] = useState('');
     const [productPrice, setProductPrice] = useState('');
     const [productImgSrc, setProductImgSrc] = useState('');
+    // const [currentProductRoute, setCurrentProductRoute] = useState('');
 
     function setProductPageTitle(selectedProductTitle, selectedProductBrand, selectedProductPrice, selectedProductImgSrc){
         setSomeTitle(selectedProductTitle);
         setProductBrand(selectedProductBrand);
         setProductPrice(selectedProductPrice);
         setProductImgSrc(selectedProductImgSrc);
+        // setCurrentProductRoute(selectedProductRoute);
         // return null;
     }
 

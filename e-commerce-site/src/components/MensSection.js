@@ -24,6 +24,8 @@ function MensSection(props){
         {src : 'product-img15.jpeg', price : '699.99', h3 : 'Face Long Sleeve', p1 : 'Yohji Yamamoto', color : 'red', alias : 'yohji', type : 'top'},
     ]);
 
+    // const[productRoute, setProductRoute] = useState('');
+
     let productArray = [
         {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean', type : 'top'}, 
         {src : 'product-img2.jpeg', price : '979.99', h3 : 'Butterfly Suit', p1 : 'Alexander McQueen', color : 'black', alias : 'alex', type : 'top'},
@@ -331,6 +333,7 @@ function MensSection(props){
     let productSrc = '';
     let productBrand = '';
     let productPrice = '';
+    // let realProductRouteLink = '';
 
     function handleLinkClick(event){
         // event.preventDefault();
@@ -338,6 +341,10 @@ function MensSection(props){
         // console.log('Product Link was clicked', event.currentTarget.firstChild.lastChild.textContent);
 
         productRouteLink = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent;
+        // realProductRouteLink = productRouteLink.replaceAll(' ', '');
+        // console.log(realProductRouteLink);
+        // setProductRoute(realProductRouteLink);
+        // console.log('route state--> ', productRoute);
         productBrand = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.nextSibling.textContent;
         productPrice = event.currentTarget.firstChild.lastChild.textContent;
         productSrc = event.currentTarget.firstChild.firstChild.src;

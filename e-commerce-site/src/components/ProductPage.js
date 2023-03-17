@@ -11,7 +11,7 @@ function ProductPage(props){
             <div style = {styleObj} className = "product-img"></div>
             <div className = "product-info-div">
                 <div className = "product-info-top">
-                    <p>{props.brand}</p>
+                    <p id = "title">{props.brand}</p>
                     <h1>{props.title}</h1>
                     <h2>{props.price}</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ratione?</p>
