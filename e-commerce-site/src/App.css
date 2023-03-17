@@ -399,6 +399,11 @@ select{
   color : white;
 }
 
+.reactLinks{
+  color : inherit;
+  text-decoration : none;
+}
+
 @media(max-width : 850px){
   .filters{
     width : 100%;

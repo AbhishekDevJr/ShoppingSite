@@ -1,8 +1,10 @@
 import React from 'react';
 import {useState} from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 // import {useEffect} from 'react';
 
-function MensSection(){
+function MensSection(props){
 
     const [someProductArray, setSomeProductArray] = useState([
         {src : 'product-img1.jpeg', price : '2552.99', h3 : 'Red Faces Shirt', p1 : 'Jean Paul Gaultier', color : 'red', alias : 'jean', type : 'top'}, 
@@ -325,6 +327,19 @@ function MensSection(){
         }
     }
 
+    let productRouteLink = '';
+
+    function handleLinkClick(event){
+        // event.preventDefault();
+        event.stopPropagation();
+        // console.log('Product Link was clicked', event.target, event.currentTarget, event.target.value);
+        console.log('Product Link was clicked', event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent);
+        productRouteLink = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent;
+        productRouteLink = productRouteLink.replaceAll(' ', '');
+        console.log(productRouteLink, props.someFunction);
+        props.someFunction(productRouteLink);
+    }
+
     return(
         <div className = "mens">
         <div className = "mens-section">
@@ -391,6 +406,7 @@ function MensSection(){
         <div className = "product-catalogue-container">
                 {someProductArray.map((item, index) => {
                     return(
+            <Link key = {index} className = "reactLinks" to = "/productPage" onClick = {handleLinkClick}>
             <div key = {index} className = "productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                 <img src = {item.src} alt = {item.h3} />
                 <div className = "product-info">
@@ -400,6 +416,7 @@ function MensSection(){
                 </div>
                 <p className = "price">${item.price}</p>
             </div>
+            </Link>
                     );
                 })}
             </div>

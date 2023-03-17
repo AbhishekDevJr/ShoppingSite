@@ -8,10 +8,17 @@ import Buttons from './components/Buttons';
 // import App from './App';
 import WomenSection from './components/WomenSection';
 import About from './components/About';
+import ProductPage from './components/ProductPage';
 
 function RouteSwitch(){
 
     const [someTruth, setSomeTruth] = useState(true);
+    const [someTitle, setSomeTitle] = useState('');
+
+    function setProductPageTitle(someParam){
+        setSomeTitle(someParam);
+        // return null;
+    }
 
     useEffect(() => {
         if(window.innerWidth < 500){
@@ -32,9 +39,10 @@ function RouteSwitch(){
                 <NavBar />
                 <Routes>
                     <Route path = "/" element = {<div className = "testView">{ (someTruth)&&(<HomeMainVideo />)}<Buttons /></div>} />
-                    <Route path = "/mens" element = {<><MensSection /></>} />
+                    <Route path = "/mens" element = {<><MensSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/womens" element = {<><WomenSection /></>} />
                     <Route path = "/about" element = {<><About /></>} />
+                    <Route path = "/productPage" element = {<><ProductPage title = {someTitle} /></>} />
                 </Routes>
             </BrowserRouter>
         </div>
