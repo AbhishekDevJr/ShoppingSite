@@ -75,6 +75,7 @@ function WomenSection(){
         //Product Price p element
         event.currentTarget.lastChild.style.backgroundColor = 'inherit';
         event.currentTarget.lastChild.style.color = 'inherit';
+        event.currentTarget.lastChild.style.zIndex = '0';
     }
 
     //Function to Filter the ProductArray based on User Choice and ReRender Product Catalogue Section

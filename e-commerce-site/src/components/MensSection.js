@@ -77,6 +77,7 @@ function MensSection(props){
         //Product Price p element
         event.currentTarget.lastChild.style.backgroundColor = 'inherit';
         event.currentTarget.lastChild.style.color = 'inherit';
+        event.currentTarget.lastChild.style.zIndex = '0';
     }
 
     //Rerenders the Product Catalogue by change State Array according to user Filter Choice

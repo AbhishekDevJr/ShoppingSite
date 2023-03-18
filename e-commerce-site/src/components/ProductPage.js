@@ -10,6 +10,7 @@ function ProductPage(props){
         <div className = "productDiv">
             <div style = {styleObj} className = "product-img"></div>
             <div className = "product-info-div">
+                <div className = "info-div-container">
                 <div className = "product-info-top">
                     <p id = "title">{props.brand}</p>
                     <h1>{props.title}</h1>
@@ -25,6 +26,7 @@ function ProductPage(props){
                     </select>
 
                     <button>ADD TO CART</button>
+                </div>
                 </div>
             </div>
         </div>
