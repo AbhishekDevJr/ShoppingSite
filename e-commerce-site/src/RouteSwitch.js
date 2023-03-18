@@ -48,7 +48,7 @@ function RouteSwitch(){
                 <Routes>
                     <Route path = "/" element = {<div className = "testView">{ (someTruth)&&(<HomeMainVideo />)}<Buttons /></div>} />
                     <Route path = "/mens" element = {<><MensSection someFunction = {setProductPageTitle} /></>} />
-                    <Route path = "/womens" element = {<><WomenSection /></>} />
+                    <Route path = "/womens" element = {<><WomenSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/about" element = {<><About /></>} />
                     <Route path = "/productPage" element = {<><ProductPage title = {someTitle} brand = {productBrand} price = {productPrice} imgSrc = {productImgSrc} /></>} />
                 </Routes>

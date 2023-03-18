@@ -3,7 +3,7 @@ import React from 'react';
 function ProductPage(props){
 
     let styleObj = {
-        backgroundImage : `linear-gradient(transparent,95%,#000),linear-gradient(90deg,transparent,70%,#000),url(${props.imgSrc})`,
+        backgroundImage : `linear-gradient(transparent,100%,#000),linear-gradient(90deg,transparent,90%,#000),linear-gradient(270deg,transparent,90%,#000),url(${props.imgSrc})`,
     };
 
     return(

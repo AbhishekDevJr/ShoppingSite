@@ -1,7 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
-function WomenSection(){
+function WomenSection(props){
 
     const [womensProductArray, setWomensProductArray] = useState([
         {src : 'w-product-img1.jpeg', price : '1849.99', h3 : 'Black Snake Dress', p1 : 'Gucci', color : 'black', alias : 'gucci', type : 'top'}, 
@@ -329,6 +330,30 @@ function WomenSection(){
         }
     }
 
+    let productRouteLink = '';
+    let productSrc = '';
+    let productBrand = '';
+    let productPrice = '';
+    // let realProductRouteLink = '';
+
+    function handleLinkClick(event){
+        // event.preventDefault();
+        event.stopPropagation();
+        // console.log('Product Link was clicked', event.currentTarget.firstChild.lastChild.textContent);
+
+        productRouteLink = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.textContent;
+        // realProductRouteLink = productRouteLink.replaceAll(' ', '');
+        // console.log(realProductRouteLink);
+        // setProductRoute(realProductRouteLink);
+        // console.log('route state--> ', productRoute);
+        productBrand = event.currentTarget.firstChild.firstChild.nextSibling.firstChild.nextSibling.textContent;
+        productPrice = event.currentTarget.firstChild.lastChild.textContent;
+        productSrc = event.currentTarget.firstChild.firstChild.src;
+        console.log('Product Link was clicked', productRouteLink, productBrand, productPrice, productSrc);
+        
+        props.someFunction(productRouteLink, productBrand, productPrice, productSrc);
+    }
+
     return(
     <div className = "women">
         <div className = "womens-section">
@@ -396,6 +421,7 @@ function WomenSection(){
         <div className = "product-catalogue-container">
                 {womensProductArray.map((item, index) => {
                     return(
+            <Link key = {index} className = "reactLinks" to = "/productPage" onClick = {handleLinkClick}>
             <div key = {index} className = "productCommonStyle" onMouseEnter={handlePointerEnter} onMouseLeave = {handlePointerLeave}>
                 <img src = {item.src} alt = {item.h3} />
                 <div className = "product-info">
@@ -405,6 +431,7 @@ function WomenSection(){
                 </div>
                 <p className = "price">${item.price}</p>
             </div>
+            </Link>
                     );
                 })}
             </div>
