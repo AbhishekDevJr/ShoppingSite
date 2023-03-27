@@ -24,19 +24,26 @@ function NavBar(){
     }
 
     function handleCartClick(event){
-        console.log(event.currentTarget.lastChild);
+        console.log('Global Console--> ',event.currentTarget);
 
-        if(event.currentTarget.lastChild.style.minHeight !== '0px'){
-            event.currentTarget.lastChild.style.minHeight = '0px';
-            event.currentTarget.lastChild.firstChild.style.display = 'none';
-            event.currentTarget.lastChild.firstChild.nextSibling.style.display = 'none';
-            event.currentTarget.lastChild.lastChild.style.display = 'none'
+        if(event.currentTarget.lastChild.style.height !== '0px'){
+            console.log('If Block Log--> ',event.currentTarget);
+            event.currentTarget.lastChild.style.height = '0px';
+            event.currentTarget.lastChild.firstChild.style.visibility = 'hidden';
+            event.currentTarget.lastChild.firstChild.nextSibling.style.visibility = 'hidden';
+            event.currentTarget.lastChild.lastChild.style.visibility = 'hidden';
             
         }else{
-            event.currentTarget.lastChild.style.minHeight = '380px';
-            event.currentTarget.lastChild.firstChild.style.display = 'initial';
-            event.currentTarget.lastChild.firstChild.nextSibling.style.display = 'initial';
-            event.currentTarget.lastChild.lastChild.style.display = 'initial'
+            event.currentTarget.lastChild.style.height = '380px';
+            event.currentTarget.lastChild.firstChild.style.visibility = 'visible';
+            console.log('Else Block Log--> ',event.currentTarget);
+            setTimeout(() => {
+                let someCartEleNew = document.querySelector('.cart');
+                // console.log('SetTimeOut Log--> ',event.currentTarget, someCartEleNew);
+                someCartEleNew.firstChild.style.visibility = 'visible';
+                someCartEleNew.firstChild.nextSibling.style.visibility = 'visible';
+                someCartEleNew.lastChild.style.visibility = 'visible';
+            }, 500);
         }
     }
         return(
