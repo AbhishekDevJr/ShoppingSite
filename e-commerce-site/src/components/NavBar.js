@@ -22,6 +22,23 @@ function NavBar(){
         const overlayEle = document.querySelector('.mobile-navigation');
         overlayEle.style.width = '0';
     }
+
+    function handleCartClick(event){
+        console.log(event.currentTarget.lastChild);
+
+        if(event.currentTarget.lastChild.style.minHeight !== '0px'){
+            event.currentTarget.lastChild.style.minHeight = '0px';
+            event.currentTarget.lastChild.firstChild.style.display = 'none';
+            event.currentTarget.lastChild.firstChild.nextSibling.style.display = 'none';
+            event.currentTarget.lastChild.lastChild.style.display = 'none'
+            
+        }else{
+            event.currentTarget.lastChild.style.minHeight = '380px';
+            event.currentTarget.lastChild.firstChild.style.display = 'initial';
+            event.currentTarget.lastChild.firstChild.nextSibling.style.display = 'initial';
+            event.currentTarget.lastChild.lastChild.style.display = 'initial'
+        }
+    }
         return(
             <div className = "nav-container">
                 <div className = "nav-row-1">
@@ -35,8 +52,8 @@ function NavBar(){
                     </div>
 
                     <div className = "row-1-utilities">
-                        <div className = "cart-container">
-                            <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                        <div className = "cart-container" onClick = {handleCartClick}>
+                            <a href = "#"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
                             <div className = "cart">
                                 <div className = "cart-row1-container">
                                     <div className = "cart-row1">

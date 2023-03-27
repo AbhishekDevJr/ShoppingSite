@@ -6,10 +6,10 @@ function Buttons(props){
         <div className = "buttons-container">
             <div className = "buttons">
                 <Link to = "/mens">
-                    <a href = "/"><button disabled = {false} className = "collection-btn">SS23 Collection</button></a>
+                    <button className = "collection-btn">SS23 Collection</button>
                 </Link>
                 <Link to = "/womens">
-                    <a href = "/"><button disabled = {false} className = "collection-btn">FW23 Collection</button></a>
+                    <button className = "collection-btn">FW23 Collection</button>
                 </Link>
             </div>
         </div>
