@@ -35,7 +35,26 @@ function NavBar(){
                     </div>
 
                     <div className = "row-1-utilities">
-                        <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                        <div className = "cart-container">
+                            <a href = "/"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                            <div className = "cart">
+                                <div className = "cart-row1-container">
+                                    <div className = "cart-row1">
+                                    <p id = "big-text">&#10005;</p>
+                                    <div className = "row1-right">
+                                        <p id = "small-text">Subtotal: </p>
+                                        <p>$0.00</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div className = "cart-row2">
+                                    {/* Cart Items Goes Here */}
+                                </div>
+                                <div className = "cart-row3">
+                                    <a href = "/"><button>Checkout</button></a>
+                                </div>
+                            </div>
+                        </div>
                         <a href = "/"><img src = "icons8-search-30.png" alt = "Search Icon" /></a>
                     </div>
 
