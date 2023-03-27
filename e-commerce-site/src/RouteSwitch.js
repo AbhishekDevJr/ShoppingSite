@@ -40,9 +40,23 @@ function RouteSwitch(){
             setSomeTruth(true);
         }
     };
+
+    function handleBodyClick(event){
+        let someCartEleNewBody = document.querySelector('.cart');
+        console.log('Route Switch--> ',event.target.firstChild);
+        if(event.target.firstChild !== null){
+            someCartEleNewBody.style.height = '0px';
+            setTimeout(() => {
+                let someCartEleNew = document.querySelector('.cart');
+                someCartEleNew.firstChild.style.visibility = 'hidden';
+                someCartEleNew.firstChild.nextSibling.style.visibility = 'hidden';
+                someCartEleNew.lastChild.style.visibility = 'hidden';
+            }, 500);
+        }
+    }
     
     return(
-        <div className = "route-switch">
+        <div className = "route-switch" onClick = {handleBodyClick}>
             <BrowserRouter>
                 <NavBar />
                 <Routes>

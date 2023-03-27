@@ -25,13 +25,15 @@ function NavBar(){
 
     function handleCartClick(event){
         console.log('Global Console--> ',event.currentTarget);
-
-        if(event.currentTarget.lastChild.style.height !== '0px'){
+        if(event.currentTarget.lastChild.style.height === '380px'){
             console.log('If Block Log--> ',event.currentTarget);
             event.currentTarget.lastChild.style.height = '0px';
-            event.currentTarget.lastChild.firstChild.style.visibility = 'hidden';
-            event.currentTarget.lastChild.firstChild.nextSibling.style.visibility = 'hidden';
-            event.currentTarget.lastChild.lastChild.style.visibility = 'hidden';
+            setTimeout(() => {
+                let someCartEleNew = document.querySelector('.cart');
+                someCartEleNew.firstChild.style.visibility = 'hidden';
+                someCartEleNew.firstChild.nextSibling.style.visibility = 'hidden';
+                someCartEleNew.lastChild.style.visibility = 'hidden';
+            }, 500);
             
         }else{
             event.currentTarget.lastChild.style.height = '380px';
@@ -39,13 +41,17 @@ function NavBar(){
             console.log('Else Block Log--> ',event.currentTarget);
             setTimeout(() => {
                 let someCartEleNew = document.querySelector('.cart');
-                // console.log('SetTimeOut Log--> ',event.currentTarget, someCartEleNew);
                 someCartEleNew.firstChild.style.visibility = 'visible';
                 someCartEleNew.firstChild.nextSibling.style.visibility = 'visible';
                 someCartEleNew.lastChild.style.visibility = 'visible';
             }, 500);
         }
     }
+
+    // function handleCrossClick(event){
+    //     let someCartEleNewCross = document.querySelector('.cart');
+    //     console.log(someCartEleNewCross);
+    // }
         return(
             <div className = "nav-container">
                 <div className = "nav-row-1">

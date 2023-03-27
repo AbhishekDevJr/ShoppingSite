@@ -491,12 +491,12 @@ select{
 }
 
 .cart{
-  display : block;
   position : absolute;
   color : black;
   background-color : white;
   border-radius : 5px;
-  height : 380px;
+  height : 0px;
+  overflow: hidden;
   min-width : 250px;
   right : -80px;
   padding : 0px 20px 0px 20px;
@@ -505,7 +505,8 @@ select{
   justify-content : space-between;
   align-items : space-between;
   font-family: 'Didact Gothic', sans-serif;
-  transition: .6s
+  transition: .6s;
+  pointer-events : none;
 }
 
 .cart-row1{
@@ -522,6 +523,8 @@ select{
 
 #big-text{
   font-weight : 600;
+  pointer-events: initial;
+  cursor : pointer;
 }
 
 .cart-row2{
@@ -544,6 +547,7 @@ select{
   font-size : 18px;
   font-family: 'Didact Gothic', sans-serif;
   font-weight : 500;
+  pointer-events :initial;
 }
 
 .row1-right{
