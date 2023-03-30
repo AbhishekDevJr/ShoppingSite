@@ -560,10 +560,11 @@ select{
 }
 
 .checkOut-container{
+  background-color : black;
 }
 
 .checkout-top{
-  min-height : 49vh;
+  min-height : 51.3vh;
   background : linear-gradient(transparent,#000), url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\checkout-banner.jpg);
   background-position : center;
   background-size: cover;
@@ -578,7 +579,71 @@ select{
 }
 
 .checkout-bottom{
-  min-height : 48.5vh;
+  min-height : 48.7vh;
+  position : relative;
+}
+
+.checkout-summary{
+  border-radius : 5px;
+  position : absolute;
+  right : 200px;
+  top : -50px;
+  min-width : 320px;
+  min-height : 350px;
+  color : black;
+  background-color : white;
+  padding : 0px 10px 20px 10px;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-between;
+  align-items : center;
+}
+
+.summary-row1{
+  border-bottom : 1px solid black;
+  width : 90%;
+  text-align : center;
+  font-size : 18px;
+  font-weight : 600;
+}
+
+.summary-row2{
+  display : flex;
+  flex-direction : column;
+  justify-content : space-between;
+  align-items : center;
+  text-align : center;
+  min-height : 160px;
+}
+
+.row2-top p{
+  font-size : 12px;
+}
+
+.row2-bottom p{
+  font-size : 20px;
+  font-weight : 600;
+}
+
+.summary-row3{
+  border-top : 1px solid black;
+  width : 90%;
+  display : grid;
+  place-items : center;
+  padding-top : 20px;
+}
+
+.summary-row3 button{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px 0 10px 0;
+  font-size: 18px;
+  font-family: 'Didact Gothic', sans-serif;
+  font-weight: 500;
+  pointer-events: initial;
+  width : 220px;
 }
 
 @media(max-width : 800px){
