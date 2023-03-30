@@ -24,6 +24,7 @@ function NavBar(){
     }
 
     function handleCartClick(event){
+        // event.stopPropagation();
         console.log('Global Console--> ',event.currentTarget);
         if(event.currentTarget.lastChild.style.height === '380px'){
             console.log('If Block Log--> ',event.currentTarget);
@@ -47,11 +48,7 @@ function NavBar(){
             }, 500);
         }
     }
-
-    // function handleCrossClick(event){
-    //     let someCartEleNewCross = document.querySelector('.cart');
-    //     console.log(someCartEleNewCross);
-    // }
+    
         return(
             <div className = "nav-container">
                 <div className = "nav-row-1">

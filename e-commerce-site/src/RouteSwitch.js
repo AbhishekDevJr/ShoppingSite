@@ -9,6 +9,7 @@ import Buttons from './components/Buttons';
 import WomenSection from './components/WomenSection';
 import About from './components/About';
 import ProductPage from './components/ProductPage';
+import CheckOutPage from './components/CheckOutPage';
 
 function RouteSwitch(){
 
@@ -41,22 +42,22 @@ function RouteSwitch(){
         }
     };
 
-    function handleBodyClick(event){
-        let someCartEleNewBody = document.querySelector('.cart');
-        console.log('Route Switch--> ',event.target.firstChild);
-        if(event.target.firstChild !== null){
-            someCartEleNewBody.style.height = '0px';
-            setTimeout(() => {
-                let someCartEleNew = document.querySelector('.cart');
-                someCartEleNew.firstChild.style.visibility = 'hidden';
-                someCartEleNew.firstChild.nextSibling.style.visibility = 'hidden';
-                someCartEleNew.lastChild.style.visibility = 'hidden';
-            }, 500);
-        }
-    }
+    // function handleBodyClick(event){
+    //     let someCartEleNewBody = document.querySelector('.cart');
+    //     console.log('Route Switch--> ',event.target);
+    //     if(event.target.firstChild !== null){
+    //         someCartEleNewBody.style.height = '0px';
+    //         setTimeout(() => {
+    //             let someCartEleNew = document.querySelector('.cart');
+    //             someCartEleNew.firstChild.style.visibility = 'hidden';
+    //             someCartEleNew.firstChild.nextSibling.style.visibility = 'hidden';
+    //             someCartEleNew.lastChild.style.visibility = 'hidden';
+    //         }, 500);
+    //     }
+    // }
     
     return(
-        <div className = "route-switch" onClick = {handleBodyClick}>
+        <div className = "route-switch">
             <BrowserRouter>
                 <NavBar />
                 <Routes>
@@ -65,6 +66,7 @@ function RouteSwitch(){
                     <Route path = "/womens" element = {<><WomenSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/about" element = {<><About /></>} />
                     <Route path = "/productPage" element = {<><ProductPage title = {someTitle} brand = {productBrand} price = {productPrice} imgSrc = {productImgSrc} /></>} />
+                    <Route path = "/checkout" element = {<><CheckOutPage /></>} />
                 </Routes>
             </BrowserRouter>
         </div>

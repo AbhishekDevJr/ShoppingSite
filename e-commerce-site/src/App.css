@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 *{
   box-sizing: border-box;
@@ -556,6 +557,28 @@ select{
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
+}
+
+.checkOut-container{
+}
+
+.checkout-top{
+  min-height : 49vh;
+  background : linear-gradient(transparent,#000), url(C:\Users\abhis\repos\ShoppingSite\e-commerce-site\public\checkout-banner.jpg);
+  background-position : center;
+  background-size: cover;
+  display : grid;
+  place-items : center;
+  color : white;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing : 10px;
+  word-spacing : 15px;
+  font-size : 24px;
+  font-weight : 100;
+}
+
+.checkout-bottom{
+  min-height : 48.5vh;
 }
 
 @media(max-width : 800px){
