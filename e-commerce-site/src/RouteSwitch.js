@@ -13,20 +13,35 @@ import CheckOutPage from './components/CheckOutPage';
 
 function RouteSwitch(){
 
+    //State Variables that hold the User Selected Product Data and passes it to Product Page
     const [someTruth, setSomeTruth] = useState(true);
     const [someTitle, setSomeTitle] = useState('');
     const [productBrand, setProductBrand] = useState('');
     const [productPrice, setProductPrice] = useState('');
     const [productImgSrc, setProductImgSrc] = useState('');
-    // const [currentProductRoute, setCurrentProductRoute] = useState('');
 
+    //State variables that hold the User Selected Product when User adds Product to Cart and passes it to Cart Component
+    const [cartImgSrc, setCartImgSrc] = useState('');
+    const [cartItemTitle, setCartItemTitle] = useState('');
+    const [cartItemPrice, setCartItemPrice] = useState('');
+    const [cartItemQuantity, setCartItemQuantity] = useState(0);
+    const [cartItemSize, setCartItemSize] = useState('');
+
+    //Function that fetches User Selected Product Info and passes it to Product Page
     function setProductPageTitle(selectedProductTitle, selectedProductBrand, selectedProductPrice, selectedProductImgSrc){
         setSomeTitle(selectedProductTitle);
         setProductBrand(selectedProductBrand);
         setProductPrice(selectedProductPrice);
         setProductImgSrc(selectedProductImgSrc);
-        // setCurrentProductRoute(selectedProductRoute);
-        // return null;
+    }
+
+    //Function that fetches User Added to Cart Item info and passes it to Cart Component
+    function fetchCartDetails(userCartImgSrc, userCartItemTitle, userCartItemPrice, userCartItemQuantity, userCartItemSize){
+        setCartImgSrc(userCartImgSrc);
+        setCartItemTitle(userCartItemTitle);
+        setCartItemPrice(userCartItemPrice);
+        setCartItemQuantity(userCartItemQuantity);
+        setCartItemSize(userCartItemSize);
     }
 
     useEffect(() => {
@@ -36,36 +51,21 @@ function RouteSwitch(){
     }, [])
 
     window.onresize = (event) => {
-        // console.log('Resizing');
         if(window.innerWidth > 500){
             setSomeTruth(true);
         }
     };
-
-    // function handleBodyClick(event){
-    //     let someCartEleNewBody = document.querySelector('.cart');
-    //     console.log('Route Switch--> ',event.target);
-    //     if(event.target.firstChild !== null){
-    //         someCartEleNewBody.style.height = '0px';
-    //         setTimeout(() => {
-    //             let someCartEleNew = document.querySelector('.cart');
-    //             someCartEleNew.firstChild.style.visibility = 'hidden';
-    //             someCartEleNew.firstChild.nextSibling.style.visibility = 'hidden';
-    //             someCartEleNew.lastChild.style.visibility = 'hidden';
-    //         }, 500);
-    //     }
-    // }
     
     return(
         <div className = "route-switch">
             <BrowserRouter>
-                <NavBar />
+                <NavBar cartImgSrc = {cartImgSrc} cartItemTitle = {cartItemTitle} cartItemPrice = {cartItemPrice} cartItemQuantity = {cartItemQuantity} cartItemSize = {cartItemSize}/>
                 <Routes>
                     <Route path = "/" element = {<div className = "testView">{ (someTruth)&&(<HomeMainVideo />)}<Buttons /></div>} />
                     <Route path = "/mens" element = {<><MensSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/womens" element = {<><WomenSection someFunction = {setProductPageTitle} /></>} />
                     <Route path = "/about" element = {<><About /></>} />
-                    <Route path = "/productPage" element = {<><ProductPage title = {someTitle} brand = {productBrand} price = {productPrice} imgSrc = {productImgSrc} /></>} />
+                    <Route path = "/productPage" element = {<><ProductPage title = {someTitle} brand = {productBrand} price = {productPrice} imgSrc = {productImgSrc} cartDetailsFunc = {fetchCartDetails} /></>} />
                     <Route path = "/checkout" element = {<><CheckOutPage /></>} />
                 </Routes>
             </BrowserRouter>

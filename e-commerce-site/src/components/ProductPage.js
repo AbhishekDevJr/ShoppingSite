@@ -6,6 +6,18 @@ function ProductPage(props){
         backgroundImage : `linear-gradient(transparent,100%,#000),linear-gradient(90deg,transparent,90%,#000),linear-gradient(270deg,transparent,90%,#000),url(${props.imgSrc})`,
     };
 
+    function handleAddToCart(event){
+        console.log(event);
+        const selectDomNode = document.querySelector('#size');
+        console.log(selectDomNode.value, typeof(selectDomNode.value));
+        if(selectDomNode.value === ''){
+            alert('Please select a size.');
+        }
+        else{
+            //Do Something
+        }
+    }
+
     return(
         <div className = "productDiv">
             <div style = {styleObj} className = "product-img"></div>
@@ -25,7 +37,7 @@ function ProductPage(props){
                         <option value = "l">L</option>
                     </select>
 
-                    <button>ADD TO CART</button>
+                    <button onClick = {handleAddToCart}>ADD TO CART</button>
                 </div>
                 </div>
             </div>
