@@ -63,27 +63,29 @@ function NavBar(props){
 
                     <div className = "row-1-utilities">
                         <div className = "cart-container" onClick = {handleCartClick}>
-                            <a href = "#"><img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" /></a>
+                            <img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" />
                             <div className = "cart">
                                 <div className = "cart-row1-container">
                                     <div className = "cart-row1">
                                     <p id = "big-text">&#10005;</p>
                                     <div className = "row1-right">
                                         <p id = "small-text">Subtotal: </p>
-                                        <p>$0.00</p>
+                                        <p> {props.cartItemPrice}</p>
                                     </div>
                                     </div>
                                 </div>
-                                <div className = "cart-row2">
+                                <div className = "cart-row2-container">
                                     {/* Cart Items Goes Here */}
-                                    <div className = "cartImgContainer">
-                                        <img src = {props.cartImgSrc} alt = "Item" />
-                                    </div>
+                                    <div className = "cart-row2">
+                                        <div className = "cartImgContainer">
+                                            <img src = {props.cartImgSrc} alt = "Item" />
+                                        </div>
 
-                                    <div className = "cartItemInfoContainer">
-                                        <p id = "Itemtitle">{props.cartItemTitle}</p>
-                                        <p id = "ItemPrice">{props.cartItemPrice} Quantity: {props.cartItemQuantity}</p>
-                                        <p id = "ItemSize">{props.cartItemSize}</p>
+                                        <div className = "cartItemInfoContainer">
+                                            <p id = "Itemtitle">{props.cartItemTitle}</p>
+                                            <p id = "ItemPrice">{props.cartItemPrice} Quantity: {props.cartItemQuantity}</p>
+                                            <p id = "ItemSize">{props.cartItemSize}</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className = "cart-row3">

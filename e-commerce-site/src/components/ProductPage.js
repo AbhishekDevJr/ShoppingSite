@@ -33,9 +33,9 @@ function ProductPage(props){
                 <div className = "product-info-bottom">
                     <select name = "size" id = "size">
                         <option value = "">Size</option>
-                        <option value = "s">S</option>
-                        <option value = "m">M</option>
-                        <option value = "l">L</option>
+                        <option value = "S">S</option>
+                        <option value = "M">M</option>
+                        <option value = "L">L</option>
                     </select>
 
                     <button onClick = {handleAddToCart}>ADD TO CART</button>

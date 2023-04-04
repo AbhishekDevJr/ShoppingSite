@@ -528,19 +528,31 @@ select{
   cursor : pointer;
 }
 
-.cart-row2{
-  outline : 1px solid red;
+.cart-row2-container{
   min-height : 230px;
+}
+
+.cart-row2{
   display : flex;
   flex-direction : row;
   justify-content : flex-start;
   align-items : flex-start;
   gap : 10px;
-  padding-top : 10px;
+  pointer-events: all;
+}
+
+.cart-row2:hover{
+  background-color : gray;
+  color : white;
+  cursor : pointer;
+}
+
+.cartImgContainer{
+  max-height : 50px;
 }
 
 .cart-row2 img {
-  height : 60px;
+  height : 50px;
   width : auto;
 }
 
@@ -548,18 +560,25 @@ select{
   margin : 0;
 }
 
+img[alt = "Cart Icon"]{
+  cursor : pointer;
+}
+
 #Itemtitle{
   font-size : 12px;
+  font-weight : 600;
 }
 
 #ItemPrice{
   font-size : 11px;
   color : rgba(0, 0, 0, 0.797);
+  font-weight : 600;
 }
 
 #ItemSize{
   font-size : 11px;
   color : rgba(0, 0, 0, 0.797);
+  font-weight : 600;
 }
 
 .cart-row3{
@@ -586,6 +605,7 @@ select{
   flex-direction : row;
   justify-content : space-between;
   align-items : center;
+  gap : 10px;
 }
 
 .checkOut-container{
