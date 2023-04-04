@@ -531,6 +531,35 @@ select{
 .cart-row2{
   outline : 1px solid red;
   min-height : 230px;
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-start;
+  align-items : flex-start;
+  gap : 10px;
+  padding-top : 10px;
+}
+
+.cart-row2 img {
+  height : 60px;
+  width : auto;
+}
+
+.cartItemInfoContainer p{
+  margin : 0;
+}
+
+#Itemtitle{
+  font-size : 12px;
+}
+
+#ItemPrice{
+  font-size : 11px;
+  color : rgba(0, 0, 0, 0.797);
+}
+
+#ItemSize{
+  font-size : 11px;
+  color : rgba(0, 0, 0, 0.797);
 }
 
 .cart-row3{

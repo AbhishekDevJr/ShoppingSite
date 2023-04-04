@@ -7,7 +7,6 @@ function ProductPage(props){
     };
 
     function handleAddToCart(event){
-        console.log(event);
         const selectDomNode = document.querySelector('#size');
         console.log(selectDomNode.value, typeof(selectDomNode.value));
         if(selectDomNode.value === ''){
@@ -15,6 +14,8 @@ function ProductPage(props){
         }
         else{
             //Do Something
+            props.cartDetailsFunc(props.imgSrc, props.title, props.price, 1, selectDomNode.value);
+            alert('Item added to Cart.');
         }
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NavBar(){
+function NavBar(props){
 
     window.addEventListener('scroll', () => {
         let navEle = document.querySelector('.nav-container');
@@ -76,6 +76,15 @@ function NavBar(){
                                 </div>
                                 <div className = "cart-row2">
                                     {/* Cart Items Goes Here */}
+                                    <div className = "cartImgContainer">
+                                        <img src = {props.cartImgSrc} alt = "Item" />
+                                    </div>
+
+                                    <div className = "cartItemInfoContainer">
+                                        <p id = "Itemtitle">{props.cartItemTitle}</p>
+                                        <p id = "ItemPrice">{props.cartItemPrice} Quantity: {props.cartItemQuantity}</p>
+                                        <p id = "ItemSize">{props.cartItemSize}</p>
+                                    </div>
                                 </div>
                                 <div className = "cart-row3">
                                     <Link to = "/checkout" ><button>Checkout</button></Link>
