@@ -78,7 +78,7 @@ function NavBar(){
                                     {/* Cart Items Goes Here */}
                                 </div>
                                 <div className = "cart-row3">
-                                    <a href = "/"><button>Checkout</button></a>
+                                    <Link to = "/checkout" ><button>Checkout</button></Link>
                                 </div>
                             </div>
                         </div>
