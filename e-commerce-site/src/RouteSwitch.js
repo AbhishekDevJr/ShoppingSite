@@ -26,6 +26,7 @@ function RouteSwitch(){
     const [cartItemPrice, setCartItemPrice] = useState('');
     const [cartItemQuantity, setCartItemQuantity] = useState(0);
     const [cartItemSize, setCartItemSize] = useState('');
+    const [productObjArray, setProductObjArray] = useState([]);
 
     //Function that fetches User Selected Product Info and passes it to Product Page
     function setProductPageTitle(selectedProductTitle, selectedProductBrand, selectedProductPrice, selectedProductImgSrc){
@@ -42,6 +43,16 @@ function RouteSwitch(){
         setCartItemPrice(userCartItemPrice);
         setCartItemQuantity(userCartItemQuantity);
         setCartItemSize(userCartItemSize);
+
+        let currentProductObj = {
+            userCartImgSrc,
+            userCartItemTitle,
+            userCartItemPrice,
+            userCartItemQuantity,
+            userCartItemSize
+        };
+
+        setProductObjArray([...productObjArray, currentProductObj]);
     }
 
     useEffect(() => {
@@ -59,7 +70,7 @@ function RouteSwitch(){
     return(
         <div className = "route-switch">
             <BrowserRouter>
-                <NavBar cartImgSrc = {cartImgSrc} cartItemTitle = {cartItemTitle} cartItemPrice = {cartItemPrice} cartItemQuantity = {cartItemQuantity} cartItemSize = {cartItemSize}/>
+                <NavBar cartImgSrc = {cartImgSrc} cartItemTitle = {cartItemTitle} cartItemPrice = {cartItemPrice} cartItemQuantity = {cartItemQuantity} cartItemSize = {cartItemSize} productObjArray = {productObjArray}/>
                 <Routes>
                     <Route path = "/" element = {<div className = "testView">{ (someTruth)&&(<HomeMainVideo />)}<Buttons /></div>} />
                     <Route path = "/mens" element = {<><MensSection someFunction = {setProductPageTitle} /></>} />

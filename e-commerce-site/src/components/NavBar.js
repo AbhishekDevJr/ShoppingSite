@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function NavBar(props){
+
+    const [receivedCartProductArray, setReceivedCartProductArray] = useState(props.productObjArray);
+
+    useEffect(() => {
+        setReceivedCartProductArray(props.productObjArray);
+    }, [props]);
 
     window.addEventListener('scroll', () => {
         let navEle = document.querySelector('.nav-container');
@@ -24,8 +32,7 @@ function NavBar(props){
     }
 
     function handleCartClick(event){
-        // event.stopPropagation();
-        console.log('Global Console--> ',event.currentTarget);
+        console.log('Cart Products Array-->', props.productObjArray);
         if(event.currentTarget.lastChild.style.height === '380px'){
             console.log('If Block Log--> ',event.currentTarget);
             event.currentTarget.lastChild.style.height = '0px';
@@ -39,7 +46,7 @@ function NavBar(props){
         }else{
             event.currentTarget.lastChild.style.height = '380px';
             event.currentTarget.lastChild.firstChild.style.visibility = 'visible';
-            console.log('Else Block Log--> ',event.currentTarget);
+            // console.log('Else Block Log--> ',event.currentTarget);
             setTimeout(() => {
                 let someCartEleNew = document.querySelector('.cart');
                 someCartEleNew.firstChild.style.visibility = 'visible';
@@ -64,6 +71,8 @@ function NavBar(props){
                     <div className = "row-1-utilities">
                         <div className = "cart-container" onClick = {handleCartClick}>
                             <img src = "icons8-shopping-cart-24.png" alt = "Cart Icon" />
+
+                            {(props.productObjArray.length === 0) ? (
                             <div className = "cart">
                                 <div className = "cart-row1-container">
                                     <div className = "cart-row1">
@@ -75,7 +84,7 @@ function NavBar(props){
                                     </div>
                                 </div>
                                 <div className = "cart-row2-container">
-                                    {/* Cart Items Goes Here */}
+                                    
                                     <div className = "cart-row2">
                                         <div className = "cartImgContainer">
                                             <img src = {props.cartImgSrc} alt = "Item" />
@@ -91,7 +100,41 @@ function NavBar(props){
                                 <div className = "cart-row3">
                                     <Link to = "/checkout" ><button>Checkout</button></Link>
                                 </div>
-                            </div>
+                            </div>) : (receivedCartProductArray.map((item, index) => {
+                                return(
+                                    <div key = {index} className = "cart">
+                                                
+                                        <div className = "cart-row1-container">
+                                            <div className = "cart-row1">
+                                            <p id = "big-text">&#10005;</p>
+                                            <div className = "row1-right">
+                                                <p id = "small-text">Subtotal: </p>
+                                                <p> {item.userCartItemPrice}</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div className = "cart-row2-container">
+                                            
+                                            <div className = "cart-row2">
+                                                <div className = "cartImgContainer">
+                                                    <img src = {item.userCartImgSrc} alt = "Item" />
+                                                </div>
+        
+                                                <div className = "cartItemInfoContainer">
+                                                    <p id = "Itemtitle">{item.userCartItemTitle}</p>
+                                                    <p id = "ItemPrice">{item.userCartItemPrice} Quantity: {item.userCartItemQuantity}</p>
+                                                    <p id = "ItemSize">{item.userCartItemSize}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className = "cart-row3">
+                                            <Link to = "/checkout" ><button>Checkout</button></Link>
+                                        </div>
+                                    
+                                    </div>
+                                        );
+                            }))}
+
                         </div>
                         <a href = "/"><img src = "icons8-search-30.png" alt = "Search Icon" /></a>
                     </div>
