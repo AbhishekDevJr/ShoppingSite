@@ -1,0 +1,38 @@
+export const mensProducts = [
+    { id: 1, src: 'product-img1.jpeg', price: '2552.99', h3: 'Red Faces Shirt', p1: 'Jean Paul Gaultier', color: 'red', alias: 'jean', type: 'top' },
+    { id: 2, src: 'product-img2.jpeg', price: '979.99', h3: 'Butterfly Suit', p1: 'Alexander McQueen', color: 'black', alias: 'alex', type: 'top' },
+    { id: 3, src: 'product-img3.jpeg', price: '797.99', h3: 'Balenciaga Boots', p1: 'Balenciaga', color: 'black', alias: 'balen', type: 'shoes' },
+    { id: 4, src: 'product-img4.jpeg', price: '779.99', h3: 'Burberry Jacket', p1: 'Burberry', color: 'brown', alias: 'bur', type: 'top' },
+    { id: 5, src: 'product-img5.jpeg', price: '3779.99', h3: 'Gold Leaf Jacket', p1: 'Dolce & Gabbana', color: 'gold', alias: 'dolce', type: 'top' },
+    { id: 6, src: 'product-img6.jpeg', price: '3779.99', h3: 'Snake Coat', p1: 'Dries Van Noten', color: 'blue', alias: 'dries', type: 'top' },
+    { id: 7, src: 'product-img7.jpeg', price: '279.99', h3: 'Bee Pin', p1: 'Gucci', color: 'gold', alias: 'gucci', type: 'acc' },
+    { id: 8, src: 'product-img8.jpeg', price: '349.99', h3: 'React Shoes', p1: 'Nike', color: 'red', alias: 'nike', type: 'shoes' },
+    { id: 9, src: 'product-img9.jpeg', price: '6349.99', h3: 'Potrait Jacket', p1: 'Raf Simons', color: 'black', alias: 'raf', type: 'top' },
+    { id: 10, src: 'product-img10.jpeg', price: '1349.99', h3: 'Red Girl Shirt', p1: 'Raf Simons', color: 'red', alias: 'raf', type: 'top' },
+    { id: 11, src: 'product-img11.jpeg', price: '1149.99', h3: 'RS Pink Jacket', p1: 'Raf Simons', color: 'red', alias: 'raf', type: 'top' },
+    { id: 12, src: 'product-img12.jpeg', price: '949.99', h3: 'Playing Card Pants', p1: 'Undercover', color: 'black', alias: 'under', type: 'bott' },
+    { id: 13, src: 'product-img13.jpeg', price: '699.99', h3: 'Castle Backpack', p1: 'Undercover', color: 'grey', alias: 'under', type: 'acc' },
+    { id: 14, src: 'product-img14.jpeg', price: '1299.99', h3: 'Black Potrait Jacket', p1: 'Undercover', color: 'filter', alias: 'under', type: 'top' },
+    { id: 15, src: 'product-img15.jpeg', price: '699.99', h3: 'Face Long Sleeve', p1: 'Yohji Yamamoto', color: 'red', alias: 'yohji', type: 'top' }
+];
+
+export const womensProducts = [
+    { src: 'w-product-img1.jpeg', price: '1849.99', h3: 'Black Snake Dress', p1: 'Gucci', color: 'black', alias: 'gucci', type: 'top' },
+    { src: 'w-product-img2.jpeg', price: '1379.99', h3: 'Tattered Silk Coat', p1: 'Maison Margiela', color: 'black', alias: 'maison', type: 'top' },
+    { src: 'w-product-img3.jpeg', price: '859.99', h3: 'Royal Gold Gown', p1: 'Luisa Beccaria', color: 'blue', alias: 'luisa', type: 'top' },
+    { src: 'w-product-img4.jpeg', price: '1319.99', h3: 'Fine Ripped Shirt', p1: 'Maison Margiela', color: 'black', alias: 'maison', type: 'top' },
+    { src: 'w-product-img5.jpeg', price: '2899.99', h3: 'Renaissance Dress', p1: 'Simone Rocha', color: 'white', alias: 'simone', type: 'top' },
+    { src: 'w-product-img6.jpeg', price: '6599.99', h3: 'Black Buttoned Overcoat', p1: 'Yohji Yamamoto', color: 'black', alias: 'yohji', type: 'top' },
+    { src: 'w-product-img7.jpeg', price: '779.99', h3: 'Black Layered Top', p1: 'Anne Sofie Madsen', color: 'black', alias: 'anne', type: 'top' },
+    { src: 'w-product-img8.jpeg', price: '579.99', h3: 'White Bracelet Sneakers', p1: 'Comme De Garcons', color: 'white', alias: 'comme', type: 'shoes' },
+    { src: 'w-product-img9.jpeg', price: '739.99', h3: 'Gold and Black Heels', p1: 'Dolce & Gabbana', color: 'gold', alias: 'dolce', type: 'shoes' },
+    { src: 'w-product-img10.jpeg', price: '1239.99', h3: 'Gold and Pink Floral Heels', p1: 'Dolce & Gabbana', color: 'gold', alias: 'dolce', type: 'shoes' },
+    { src: 'w-product-img11.jpeg', price: '669.99', h3: 'Stitched Mouse Top', p1: 'Dolce & Gabbana', color: 'white', alias: 'dolce', type: 'top' },
+    { src: 'w-product-img12.jpeg', price: '279.99', h3: 'Black Emblem Bag', p1: 'Jean Paul Gaultier', color: 'black', alias: 'jean', type: 'acc' },
+    { src: 'w-product-img13.jpeg', price: '339.99', h3: 'Glitter Skull Bag', p1: 'Manish Arora', color: 'blue', alias: 'manish', type: 'acc' },
+    { src: 'w-product-img14.jpeg', price: '489.99', h3: 'Portrait Bag', p1: 'Moschino', color: 'gold', alias: 'moschino', type: 'acc' },
+    { src: 'w-product-img15.jpeg', price: '1239.99', h3: 'Gold Bow Heels', p1: 'Versace', color: 'gold', alias: 'versace', type: 'shoes' },
+    { src: 'w-product-img16.jpeg', price: '2579.99', h3: 'Black Lace Dress', p1: 'Valentino', color: 'black', alias: 'valentino', type: 'top' },
+    { src: 'w-product-img17.jpeg', price: '899.99', h3: 'Aged Snake Bag', p1: 'Valentino', color: 'gold', alias: 'valentino', type: 'acc' },
+    { src: 'w-product-img18.jpeg', price: '1529.99', h3: 'Transparent Stitched Dress', p1: 'Valentino', color: 'grey', alias: 'valentino', type: 'top' },
+];
